@@ -132,7 +132,7 @@ Long-term goals:
 
 ## Contact
 - **GitHub:** [D4RKL0RD-J0571N](https://github.com/D4RKL0RD-J0571N/) 
-- **LinkedIn:** [jostin-lopez]https://www.linkedin.com/in/jostin-lopez-b761261bb  
+- **LinkedIn:** [jostin-lopez](https://www.linkedin.com/in/jostin-lopez-b761261bb)  
 - **Email:** [Gmail](jostinlopezsobalbarro@gmail.com)
 
 ---
