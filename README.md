@@ -78,9 +78,8 @@ My approach is built around four principles:
 
 ## 🌐 Connect
 
-- 🐙 **GitHub:** [github.com/J0571N](https://github.com/J0571N)  
-- 💼 **LinkedIn:** [Your LinkedIn Link Here]  
-- 📫 **Email:** (optional — add only if comfortable)
+- 🐙 **GitHub:** [github.com/J0571N](https://github.com/J0571N)
+- 📫 **Contact:** [LinkedIn](https://www.linkedin.com/in/jostin-lopez-b761261bb) [Email](jostinlopezsobalbarro@gmail.com)
 
 ---
 
