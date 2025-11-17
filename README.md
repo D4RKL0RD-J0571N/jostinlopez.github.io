@@ -1,147 +1,143 @@
-# 🎮 J0571N — Game Systems Developer 
+# 🎮 J0571N — Game Systems Developer  
 > _“I build the invisible machinery that makes worlds come alive.”_
 
-Hi — I’m **Jostin Lopez (aka J0571N)**, a **game systems developer** and **technical designer** focused on creating **modular, expandable, and expressive tools** inside **Unity**. I specialize in systems design, tooling, and architecture — building the logic that lets worlds think, adapt, and evolve.
+Hi — I’m **Jostin Lopez (J0571N)**, a **game systems developer** and **software engineer** focused on scalable, modular, and expressive frameworks built in **Unity**.  
+I design the architectures, tools, and logic that allow worlds to **think**, **adapt**, and **evolve** — blending solid engineering with creative intent.
 
 ---
 
 ## Table of Contents
 - [About Me](#about-me)
 - [Design Philosophy](#design-philosophy)
-- [Technical Toolkit](#technical-toolkit)
+- [Technical Summary](#technical-summary)
 - [Featured Projects](#featured-projects)
 - [Other Experiments](#other-experiments)
-- [What I'm Building Toward](#what-im-building-toward)
+- [Direction & Goals](#direction--goals)
 - [Contact](#contact)
 - [License & Notes](#license--notes)
 
 ---
 
 ## About Me
-Since **2021** I’ve been building frameworks, prototypes, and experimental tools to understand what makes games **feel alive**. I’m self-taught, deeply system-oriented, and passionate about merging engineering with creativity.
+I’m a **self-taught developer** driven by curiosity and persistence.  
+Since 2021 I’ve been creating frameworks, prototypes, and tooling that explore how systems shape player experience.  
 
-My work explores:
-- Modular & data-driven architectures  
-- Runtime content creation tools (in-game editors / player tools)  
-- Simulation and AI-inspired gameplay logic  
-- Tool creation for designers and developers
+My focus includes:
 
-I don’t just build mechanics — I build the foundations that make mechanics possible.
+- Modular, **data-driven architectures**  
+- **Runtime simulation** and AI-inspired logic  
+- **Editor & runtime tools** that empower designers  
+- **Persistence, serialization, and extensibility**
+
+Before formal study, I built my first games in early **Game Maker**, learning everything from documentation and experimentation alone.  
+That independence still defines how I work today.
 
 ---
 
-## Design Philosophy
+## Design Philosophy  
 > _“Systems are stories told in logic.”_
 
-Every system should feel purposeful — like it belongs in the world. I follow four core principles in every project:
-
-- **Expandability** — Build once, extend forever.  
-- **Simplicity** — Clean structure beats clever tricks.  
-- **Empowerment** — Tools should make creation effortless.  
-- **Immersion through logic** — When systems connect, the world breathes.
+- **Expandability** — Build once, extend endlessly  
+- **Simplicity** — Clear structure over clever tricks  
+- **Empowerment** — Tools should make creativity effortless  
+- **Connection** — When systems talk, worlds breathe  
 
 ---
 
-## Technical Toolkit
+## Technical Summary
 
 **Languages**  
-`C#` · `Python` · `Java` · `JavaScript`
+`C#` · `Python` · `TypeScript` · `Java` · `JavaScript` · `HTML/CSS` · `SQL`
 
-**Engine & Frameworks**  
-`Unity (6.x)` · `URP` · `UI Toolkit` · `Input System`
+**Engines & Frameworks**  
+`Unity (6.x)` · `URP` · `UI Toolkit` · `Input System` · `Node.js` · `RPG Maker MZ`
 
-**Specialties**  
-- Systems architecture & data-driven design  
-- Gameplay logic & event pipelines  
-- Tooling & editor scripting  
-- Runtime serialization & persistence  
-- AI / simulation-based mechanics
+**Core Expertise**
+- Systems Architecture & Data-Driven Design  
+- Runtime Serialization & Persistence  
+- AI / Simulation Logic  
+- Tooling & Editor Scripting  
+- Backend Structure & Middleware Patterns  
 
-**Other Skills**  
-`Git` · `PowerShell` · `JSON` · `Custom Data Pipelines`
+**Additional Skills**  
+Version Control (Git) · Debugging · Server Deployment · Local LLM Integration
 
 ---
 
 ## Featured Projects
 
-> Each project is a systems-first prototype or framework demonstrating architecture, tools, and engineering craft.
+Each project represents a standalone framework demonstrating systems thinking, scalability, and clean architecture.
 
-### 🌀 Echo-Location Maze System (ELMS)  
-**Procedural maze prototype** with runtime generation, echo-based reveal mechanics, and designer-facing tools.  
-**Focus:** Procedural logic · Event systems · Designer tooling  
-**Repo:** [MazePrototype](https://github.com/D4RKL0RD-J0571N/MazePrototype)
-
----
-
-### 🧠 Local AI Companion  
-**A fully offline AI companion framework** for contextual dialogue, persistent memory, and local LLM integration (privacy-first).  
-**Focus:** Modular architecture · Memory systems · Local LLM wrappers  
-**Repo:** [local-ai-companion](https://github.com/D4RKL0RD-J0571N/local-ai-companion)
+### 🌀 Echo-Location Maze System (ELMS)
+Procedural maze generator with echo-based reveal mechanics and designer-facing tools.  
+**Focus:** Procedural Logic · Event Systems · Designer Tooling  
+**Repo:** [github.com/D4RKL0RD-J0571N/MazePrototype](https://github.com/D4RKL0RD-J0571N/MazePrototype)
 
 ---
 
-### 🏗️ 3D Learning Prototype — Modular Game Architecture & Persistence Framework  
-**Conceptual 3D prototype** that demonstrates an Entity–Attribute–Progression (EAP) system, IoC patterns, and robust save/load architecture for RPGs.  
-**Focus:** Design patterns · Serialization · Runtime modularity  
-**Repo:** [3D-Learning-Prototype](https://github.com/D4RKL0RD-J0571N/3D-Learning-Prototype)
+### 🧠 Local AI Companion Framework
+Offline, privacy-first AI companion with contextual memory and persona modeling.  
+**Focus:** Modular Architecture · Memory Persistence · Local LLMs  
+**Repo:** [github.com/D4RKL0RD-J0571N/local-ai-companion](https://github.com/D4RKL0RD-J0571N/local-ai-companion)
 
 ---
 
-### ⚔️ RPG Framework (2022 Prototype)  
-**Early, large-scale modular RPG foundation** exploring inventory, stats, items, and event-driven gameplay systems.  
-**Focus:** Data-driven items · Actor logic · System interoperability  
-**Repo:** [RPG-Framework-2022-Prototype](https://github.com/D4RKL0RD-J0571N/RPG-Framework-2022-Prototype)
+### 🏗️ 3D Learning Prototype — Modular Game Architecture & Persistence
+RPG prototype demonstrating an Entity–Attribute–Progression (EAP) system and data-driven persistence framework.  
+**Focus:** Design Patterns · Serialization · Runtime Modularity  
+**Repo:** [github.com/D4RKL0RD-J0571N/3D-Learning-Prototype](https://github.com/D4RKL0RD-J0571N/3D-Learning-Prototype)
 
 ---
 
-### 🎥 Custom HTML5 Video Playback & Control Plugin (RPG Maker MZ)  
-**Engine extension** that injects an HTML5 `<video>` element into RPG Maker MZ, providing playback-speed control, looping, fade transitions, skip input, and a custom wait-mode integrated with the engine’s interpreter.  
-**Focus:** Engine integration · Media systems · DOM/Canvas layering  
-**Repo:** [RPGMZ-Custom-Video-Player](https://github.com/D4RKL0RD-J0571N/RPGMZ-Custom-Video-Player)
+### 🎥 Custom HTML5 Video Playback Plugin (RPG Maker MZ)
+Engine extension for advanced video playback control — variable speed, fades, looping, and skip logic integrated into the interpreter.  
+**Focus:** Engine Integration · Media Systems · DOM/Canvas Layering  
+**Repo:** [github.com/D4RKL0RD-J0571N/RPGMZ-Custom-Video-Player](https://github.com/D4RKL0RD-J0571N/RPGMZ-Custom-Video-Player)
 
 ---
 
-### 🛠️ ResourceManager — TypeScript Backend Toolkit  
-**TypeScript-first backend toolkit** for structured resource management, modular controllers/services/models, and middleware.  
-**Focus:** Backend architecture · Type-safe services · Middleware patterns  
-**Repo:** [ResourceManager](https://github.com/D4RKL0RD-J0571N/resourcemanager)
+### 🛠️ ResourceManager — TypeScript Backend Toolkit
+Framework-agnostic backend toolkit for scalable resource management using a controller–service–model architecture.  
+**Focus:** Backend Architecture · Type-Safe Services · Middleware Design  
+**Repo:** [github.com/D4RKL0RD-J0571N/resourcemanager](https://github.com/D4RKL0RD-J0571N/resourcemanager)
 
 ---
 
 ## Other Experiments
-Small to mid-sized systems and prototypes that explore specific problems:
+Smaller focused systems exploring isolated challenges:
 
-- **Objective Framework** — Modular quests & objectives (tracking, retries, optional/required categories).  
-- **Actor Initialization System** — Runtime, UI-driven actor creation and initialization.  
-- **Attribute Registry** — Lightweight stat container & registry for scalable attributes.  
-- **Weapon System Prototype** — Configurable shooting modes, reloading, and VFX glue code.  
-- **Fantasy Life Prototype** — Systems experiment: elemental farming, town growth, and simulation.  
-- **Cursed Church** — Horror prototype focusing on event sequencing and atmosphere control.
+- **Objective Framework** — modular quests & tracking  
+- **Actor Initialization System** — runtime, UI-driven creation  
+- **Attribute Registry** — scalable stat containers  
+- **Weapon System Prototype** — configurable shooting modes  
+- **Fantasy Life Prototype** — elemental farming & simulation  
+- **Cursed Church** — horror prototype using event sequencing  
 
 ---
 
-## What I’m Building Toward
-I aim to be a **systems engineer for games** — someone who designs runtime simulation, editor tooling, and modular frameworks that other creators can rely on.
+## Direction & Goals
+I aim to evolve into a **systems engineer for interactive worlds** — designing runtime simulation, editor tooling, and modular architectures that empower teams.
 
-Long-term goals:
-- Runtime world simulation systems  
-- Player-driven content editors & mod tools  
-- Modular frameworks and reusable architecture for teams
+**Long-term focus**
+- Runtime simulation frameworks  
+- Player-driven creation & mod tools  
+- Scalable core systems for game studios  
 
 ---
 
 ## Contact
-- **GitHub:** [D4RKL0RD-J0571N](https://github.com/D4RKL0RD-J0571N/) 
-- **LinkedIn:** [jostin-lopez](https://www.linkedin.com/in/jostin-lopez-b761261bb)  
-- **Email:** [Gmail](jostinlopezsobalbarro@gmail.com)
+**GitHub:** [D4RKL0RD-J0571N](https://github.com/D4RKL0RD-J0571N)  
+**LinkedIn:** [jostin-lopez](https://www.linkedin.com/in/jostin-lopez-b761261bb)  
+**Email:** [jostinlopezsobalbarro@gmail.com](mailto:jostinlopezsobalbarro@gmail.com)
 
 ---
 
 ## License & Notes
-All projects are **portfolio & educational** works. Licenses vary by repository — check each repo for specific license files.  
-If you’d like writable access, collaboration, or private demos, feel free to reach out.
+All repositories are **portfolio / educational** projects.  
+Licenses vary — check each repo for details.  
+For collaboration or private demos, reach out directly.
 
 ---
 
 > _“Every prototype is a fragment of a larger world I’m building — one system at a time.”_  
-— **Jostin Lopez (J0571N)**
+> — **Jostin Lopez (J0571N)**
