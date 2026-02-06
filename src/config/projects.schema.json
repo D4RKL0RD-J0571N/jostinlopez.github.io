@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Project",
+    "type": "object",
+    "required": [
+        "id",
+        "title",
+        "description",
+        "category",
+        "tags",
+        "featured"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-_]+$"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "long_description": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string"
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "thumbnail": {
+            "type": "string"
+        },
+        "featured": {
+            "type": "boolean"
+        },
+        "links": {
+            "type": "object",
+            "properties": {
+                "repo": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "demo": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            }
+        }
+    }
+}

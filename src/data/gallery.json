@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Generative Synthesis",
+        "type": "AI Art",
+        "color": "opacity-10 bg-accent"
+    },
+    {
+        "id": 2,
+        "title": "Cyberpunk Character",
+        "type": "Illustration",
+        "color": "opacity-10 bg-accent"
+    },
+    {
+        "id": 3,
+        "title": "Apparel Design 01",
+        "type": "Print",
+        "color": "opacity-10 bg-accent"
+    },
+    {
+        "id": 4,
+        "title": "Modular Environment",
+        "type": "3D",
+        "color": "opacity-10 bg-accent"
+    },
+    {
+        "id": 5,
+        "title": "Neural Style",
+        "type": "Experiment",
+        "color": "opacity-10 bg-accent"
+    },
+    {
+        "id": 6,
+        "title": "Game UI Mockup",
+        "type": "UI/UX",
+        "color": "opacity-10 bg-accent"
+    }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "crm-orchestrator",
+    "title": "Enterprise AI CRM Orchestrator",
+    "category": "AI",
+    "featured": true,
+    "thumbnail": "assets/project-placeholder.png",
+    "description": "A scalable orchestrator for enterprise CRM systems, integrating LLMs for automated customer support.",
+    "long_description": "Designed and built a high-throughput orchestration layer that routes customer queries to specialized AI agents. Handled context management, rate limiting, and fallback to human agents. Built with Python (FastAPI), Redis for state, and LangChain for LLM flow control.",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "LLM",
+      "Redis",
+      "Docker"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N",
+      "demo": ""
+    }
+  },
+  {
+    "id": "local-ai-framework",
+    "title": "Local AI Companion Framework",
+    "category": "AI",
+    "featured": true,
+    "thumbnail": "assets/project-placeholder.png",
+    "description": "A privacy-focused framework for running personal AI assistants locally on consumer hardware.",
+    "long_description": "Developed a modular framework to deploy and manage quantized LLMs locally. Features include a plugin system for deskop integration, memory management for long-term context, and a strictly local-first data policy.",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "Local LLM",
+      "Privacy"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N",
+      "demo": ""
+    }
+  },
+  {
+    "id": "3d-learning",
+    "title": "3D Learning Prototype",
+    "category": "Game Systems",
+    "featured": false,
+    "thumbnail": "assets/project-placeholder.png",
+    "description": "Interactive 3D environment for spatial learning and visualization experiments.",
+    "tags": [
+      "Unity",
+      "C#",
+      "Education"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N"
+    }
+  },
+  {
+    "id": "rpgmz-video",
+    "title": "RPGMZ Video Plugin",
+    "category": "Game Systems",
+    "featured": false,
+    "thumbnail": "assets/project-placeholder.png",
+    "description": "Plugin for RPG Maker MZ extending video playback capabilities for interactive storytelling.",
+    "tags": [
+      "JavaScript",
+      "RPG Maker",
+      "Plugin"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N/RPGMZ-plugins"
+    }
+  },
+  {
+    "id": "genai-experiments",
+    "title": "Generative AI Research Experiments",
+    "category": "Tools",
+    "featured": false,
+    "thumbnail": "assets/project-placeholder.png",
+    "description": "A collection of experiments in generative art, audio synthesis, and style transfer.",
+    "tags": [
+      "Python",
+      "Stable Diffusion",
+      "Audio"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N"
+    }
+  }
+]

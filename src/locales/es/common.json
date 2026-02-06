@@ -1,0 +1,76 @@
+{
+    "nav": {
+        "about": "Sobre Mí",
+        "projects": "Proyectos",
+        "expertise": "Expertise",
+        "creative": "Creativo",
+        "contact": "Contacto",
+        "editMode": "Modo Edición",
+        "privacy": "Política de Privacidad",
+        "terms": "Términos de Servicio"
+    },
+    "hero": {
+        "greeting": "J0571N",
+        "titles": [
+            "Tecnólogo Creativo",
+            "Ingeniero de Sistemas",
+            "Experimentador GenAI"
+        ],
+        "subtitle": "Construyo la maquinaria invisible que da vida a mundos y sistemas. Uniendo la lógica, el arte y la inteligencia.",
+        "cta": {
+            "projects": "Ver Proyectos",
+            "cv": "Descargar CV"
+        },
+        "scroll": "Desplazarse"
+    },
+    "about": {
+        "title": "Sobre Mí",
+        "bio1": "Soy un tecnólogo creativo autodidacta que construye sistemas donde convergen la lógica, el arte y la inteligencia. Diseño sistemas modulares en tiempo real para videojuegos, construyo backends escalables y flujos de trabajo en tiempo real, e ingeniero pipelines de IA generativa local-first que priorizan la reproducibilidad y la personalización.",
+        "bio2": "Desarrollo prototipos y herramientas de producción en Unity, FastAPI y PyTorch — y también produzco trabajo creativo (ilustración 2D, audio, diseño de impresión). Me apasiona conectar la investigación con la ingeniería práctica para crear herramientas y experiencias que empoderen a los creadores.",
+        "skills": {
+            "engineering": "Ingeniería Creativa",
+            "ai": "IA Generativa",
+            "games": "Sistemas de Juego",
+            "systems": "Sistemas Escalables"
+        },
+        "systemStatus": {
+            "online": "Sistema_En_Línea",
+            "ready": "Listo para Desplegar"
+        }
+    },
+    "projects": {
+        "featured": "Proyectos Destacados",
+        "index": "Índice de Proyectos",
+        "viewCode": "Ver Código",
+        "details": "Detalles",
+        "modal": {
+            "close": "Cerrar",
+            "techStack": "Stack Tecnológico"
+        }
+    },
+    "gallery": {
+        "title": "Galería Creativa",
+        "disclaimer": "Obras visuales y experimentos. Se poblará con activos reales."
+    },
+    "contact": {
+        "title": "Construyamos Algo Extraordinario",
+        "subtitle": "Abierto a oportunidades en Ingeniería de Sistemas, IA y Tecnología Creativa.",
+        "emailLabel": "Envíame un correo",
+        "emailAction": "Clic para copiar correo",
+        "resumeLabel": "Currículum",
+        "resumeAction": "Descargar Versión PDF",
+        "form": {
+            "name": "Nombre",
+            "email": "Correo Electrónico",
+            "message": "Mensaje",
+            "send": "Enviar Mensaje"
+        }
+    },
+    "footer": {
+        "text": "Jostin Lopez. Construido con React, Tailwind y Framer Motion."
+    },
+    "legal": {
+        "privacy": "Política de Privacidad\n\n1. Resumen\nEste sitio web de portafolio no recopila datos personales, no utiliza cookies de rastreo y no comparte información con terceros. Cualquier información enviada a través del formulario de contacto se utiliza únicamente para fines de comunicación.\n\n2. Enlaces Externos\nEste sitio contiene enlaces a plataformas externas (GitHub, LinkedIn). No nos hacemos responsables de las prácticas de privacidad de esos sitios.",
+        "terms": "Términos de Servicio\n\n1. Uso de Contenido\nTodo el contenido original, incluyendo fragmentos de código, diseños y arte, es propiedad intelectual de Jostin Lopez a menos que se indique lo contrario. Los proyectos enlazados pueden tener sus propias licencias específicas (por ejemplo, MIT, GPL).\n\n2. Descargo de Responsabilidad\nEl contenido proporcionado en este portafolio es para mostrar trabajo profesional y experimentos. Se proporciona 'tal cual' sin garantía de ningún tipo."
+    }
+}

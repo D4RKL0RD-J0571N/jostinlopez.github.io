@@ -1,0 +1,18 @@
+
+> temp_vite@0.0.0 lint
+> eslint .
+
+
+D:\Development\Business Profile Creation\portfolio-site\src\App.test.jsx
+  2:10  error  'render' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u  no-unused-vars
+  2:18  error  'screen' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u  no-unused-vars
+
+D:\Development\Business Profile Creation\portfolio-site\src\components\ProjectEditor.jsx
+  6:10  error  'projectSchema' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u  no-unused-vars
+
+D:\Development\Business Profile Creation\portfolio-site\src\components\ui\Card.jsx
+  2:18  error  'useMotionTemplate' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u  no-unused-vars
+  2:37  error  'useMotionValue' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u     no-unused-vars
+
+Γ£û 5 problems (5 errors, 0 warnings)
+

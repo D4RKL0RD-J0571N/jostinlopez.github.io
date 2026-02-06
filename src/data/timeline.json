@@ -1,0 +1,16 @@
+[
+    {
+        "id": "role-1",
+        "period": "2024 — Present",
+        "title": "Enterprise AI & CRM",
+        "description": "Developing scalable orchestration layers for AI agents and high-throughput CRM integrations.",
+        "isCurrent": true
+    },
+    {
+        "id": "role-2",
+        "period": "2021 — 2024",
+        "title": "Full-Stack Engineer",
+        "description": "Built and maintained complex web ecosystems, microservices, and specialized internal tools.",
+        "isCurrent": false
+    }
+]

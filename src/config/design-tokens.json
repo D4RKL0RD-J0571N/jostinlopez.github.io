@@ -1,0 +1,38 @@
+{
+    "color-bg": {
+        "value": "#0f172a"
+    },
+    "color-card": {
+        "value": "#1e293b"
+    },
+    "color-text-primary": {
+        "value": "#f1f5f9"
+    },
+    "color-text-secondary": {
+        "value": "#94a3b8"
+    },
+    "color-accent": {
+        "value": "#2dd4bf"
+    },
+    "color-accent-glow": {
+        "value": "rgba(45, 212, 191, 0.2)"
+    },
+    "font-sans": {
+        "value": "'Inter', system-ui, sans-serif"
+    },
+    "font-mono": {
+        "value": "'Fira Code', monospace"
+    },
+    "duration-fast": {
+        "value": "200ms"
+    },
+    "duration-normal": {
+        "value": "500ms"
+    },
+    "duration-slow": {
+        "value": "800ms"
+    },
+    "easing-default": {
+        "value": "ease-out"
+    }
+}

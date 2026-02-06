@@ -1,0 +1,76 @@
+{
+    "nav": {
+        "about": "About",
+        "projects": "Projects",
+        "expertise": "Expertise",
+        "creative": "Creative",
+        "contact": "Contact",
+        "editMode": "Edit Mode",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "hero": {
+        "greeting": "J0571N",
+        "titles": [
+            "Creative Technologist",
+            "Systems Engineer",
+            "GenAI Experimenter"
+        ],
+        "subtitle": "I build the invisible machinery that makes worlds and systems come alive. Bridging the gap between logic, art, and intelligence.",
+        "cta": {
+            "projects": "See Projects",
+            "cv": "Download CV"
+        },
+        "scroll": "Scroll Down"
+    },
+    "about": {
+        "title": "About Me",
+        "bio1": "I’m a self-taught creative technologist who builds systems where logic, art, and intelligence converge. I design modular runtime systems for games, build scalable backends and real-time workflows, and engineer local-first generative AI pipelines that prioritize reproducibility and customization.",
+        "bio2": "I ship prototypes and production tooling across Unity, FastAPI, and PyTorch — and I also produce creative work (2D illustration, audio, print design). I thrive on connecting research and practical engineering to create tools and experiences that empower creators.",
+        "skills": {
+            "engineering": "Creative Engineering",
+            "ai": "Generative AI",
+            "games": "Game Systems",
+            "systems": "Scalable Systems"
+        },
+        "systemStatus": {
+            "online": "System_Online",
+            "ready": "Ready to Deploy"
+        }
+    },
+    "projects": {
+        "featured": "Featured Projects",
+        "index": "Project Index",
+        "viewCode": "View Code",
+        "details": "Details",
+        "modal": {
+            "close": "Close",
+            "techStack": "Key Tech Stack"
+        }
+    },
+    "gallery": {
+        "title": "Creative Gallery",
+        "disclaimer": "Visual works & experiments. To be populated with real assets."
+    },
+    "contact": {
+        "title": "Let's Build Something Extraordinary",
+        "subtitle": "Open for opportunities in Systems Engineering, AI, and Creative Tech.",
+        "emailLabel": "Email Me",
+        "emailAction": "Click to copy email",
+        "resumeLabel": "Resume",
+        "resumeAction": "Download PDF Version",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "send": "Send Message"
+        }
+    },
+    "footer": {
+        "text": "Jostin Lopez. Built with React, Tailwind & Framer Motion."
+    },
+    "legal": {
+        "privacy": "Privacy Policy\n\n1. Overview\nThis portfolio website does not collect any personal data, does not use cookies for tracking, and does not share information with third parties. Any information submitted via the contact form is used solely for communication purposes.\n\n2. External Links\nThis site contains links to external platforms (GitHub, LinkedIn). We are not responsible for the privacy practices of those sites.",
+        "terms": "Terms of Service\n\n1. Content Usage\nAll original content, including code snippets, designs, and artwork, is the intellectual property of Jostin Lopez unless otherwise stated. Projects linked may have their own specific licenses (e.g., MIT, GPL).\n\n2. Disclaimer\nThe content provided on this portfolio is for showcasing professional work and experiments. It is provided 'as is' without warranty of any kind."
+    }
+}
