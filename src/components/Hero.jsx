@@ -103,7 +103,7 @@ export default function Hero() {
 
             {/* Scroll indicator */}
             <motion.div
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-secondary flex flex-col items-center gap-2"
+                className="absolute bottom-10 inset-x-0 mx-auto w-fit text-text-secondary flex flex-col items-center gap-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: [0, 10, 0] }}
                 transition={{ delay: 2, duration: 2, repeat: Infinity }}

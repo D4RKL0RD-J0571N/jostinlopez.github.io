@@ -35,9 +35,11 @@ export default function Projects() {
     return (
         <section id="projects" className="py-20 bg-bg-base">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold mb-12 border-l-4 border-accent pl-4">
-                    {t('projects.featured')}
-                </h2>
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold inline-block relative after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-accent after:rounded-full">
+                        {t('projects.featured')}
+                    </h2>
+                </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {featured.map((project, index) => (
@@ -88,9 +90,12 @@ export default function Projects() {
                     ))}
                 </div>
 
-                {/* Project Index */}
                 <div className="mt-20">
-                    <h3 className="text-2xl font-bold mb-8 text-text-secondary">{t('projects.index')}</h3>
+                    <div className="text-center mb-12">
+                        <h3 className="text-2xl font-bold text-text-secondary inline-block relative after:content-[''] after:absolute after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-0.5 after:bg-bg-elevated after:rounded-full">
+                            {t('projects.index')}
+                        </h3>
+                    </div>
                     <div className="grid gap-4">
                         {others.map((project, i) => (
                             <Card

@@ -15,9 +15,11 @@ export default function Timeline() {
                     viewport={{ once: true }}
                     className="space-y-12"
                 >
-                    <h2 className="text-3xl font-bold mb-12 border-l-4 border-accent pl-4 text-text-primary">
-                        {t('timeline.title', 'Professional History')}
-                    </h2>
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold inline-block relative after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-accent after:rounded-full text-text-primary">
+                            {t('timeline.title', 'Professional History')}
+                        </h2>
+                    </div>
 
                     <div className="relative pl-8 md:pl-12 border-l border-bg-elevated/50 space-y-12 py-4">
                         {timeline.map((role) => (

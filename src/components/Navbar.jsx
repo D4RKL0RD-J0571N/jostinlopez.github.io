@@ -34,7 +34,7 @@ export default function Navbar() {
             "fixed top-0 w-full z-50 transition-all duration-300",
             scrolled ? "bg-bg-base/90 backdrop-blur-md border-b border-bg-elevated" : "bg-transparent"
         )}>
-            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div className="container mx-auto px-6 h-20 flex items-center justify-between">
                 <a href="#" className="font-mono text-xl font-bold text-text-primary hover:text-accent transition-colors">
                     J0571N
                 </a>

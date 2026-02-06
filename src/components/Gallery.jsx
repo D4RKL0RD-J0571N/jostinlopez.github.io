@@ -26,12 +26,14 @@ export default function Gallery() {
     return (
         <section id="creative" className="py-20 bg-bg-base border-t border-bg-elevated">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold mb-8 border-l-4 border-accent pl-4">
-                    {t('gallery.title')}
-                </h2>
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold inline-block relative after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-accent after:rounded-full">
+                        {t('gallery.title')}
+                    </h2>
+                </div>
 
                 {/* Filters */}
-                <div className="flex gap-4 mb-10 overflow-x-auto pb-2">
+                <div className="flex justify-center gap-4 mb-10 overflow-x-auto pb-4">
                     {categories.map(cat => (
                         <button
                             key={cat}
