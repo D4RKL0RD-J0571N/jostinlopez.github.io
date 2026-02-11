@@ -135,7 +135,7 @@ export default function Contact() {
                                     required
                                     autoComplete="name"
                                     className="w-full bg-bg-base border border-bg-elevated rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent transition-all"
-                                    placeholder="John Doe"
+                                    placeholder="Jostin López"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -148,7 +148,7 @@ export default function Contact() {
                                     autoComplete="email"
                                     spellCheck={false}
                                     className="w-full bg-bg-base border border-bg-elevated rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent transition-all"
-                                    placeholder="john@example.com"
+                                    placeholder="jostinlopezsobalbarro@gmail.com"
                                 />
                             </div>
                             <div className="space-y-2">
