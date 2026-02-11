@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import ProjectEditor from './components/CMSProjectEditor';
 import { applyTheme } from './utils/applyTheme';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, Layers } from 'lucide-react';
 import { ScrollProgress } from './components/ui/ScrollProgress';
 import { ContentProvider, useContent } from './context/ContentContext';
 
