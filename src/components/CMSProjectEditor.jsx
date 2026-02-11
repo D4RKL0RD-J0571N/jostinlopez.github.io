@@ -14,14 +14,11 @@ export default function CMSProjectEditor({ onClose }) {
         projects, addProject, updateProject, deleteProject,
         timeline, addTimelineItem, updateTimelineItem, deleteTimelineItem,
         gallery, addGalleryItem, updateGalleryItem, deleteGalleryItem,
-        globalSettings, updateSettings, resetData,
-        sectionOrder, moveProject, moveSection
+        globalSettings, updateSettings, resetData
     } = useContent();
 
     const [activeTab, setActiveTab] = useState('projects'); // projects, timeline, gallery, settings, json
     const [selectedId, setSelectedId] = useState(null);
-    const [viewport, setViewport] = useState('desktop');
-    const [jsonPreview, setJsonPreview] = useState('');
 
     // Prepare Schema & Data based on selection
     const [currentSchema, setCurrentSchema] = useState(null);
@@ -34,7 +31,6 @@ export default function CMSProjectEditor({ onClose }) {
         if (activeTab === 'settings') {
             schema = portfolioSchema.properties.globalSettings;
             data = globalSettings;
-            setSelectedId('global');
         } else if (activeTab === 'projects') {
             schema = portfolioSchema.properties.projects.items;
             data = selectedId ? projects.find(p => p.id === selectedId) : null;
@@ -48,13 +44,15 @@ export default function CMSProjectEditor({ onClose }) {
 
         setCurrentSchema(schema);
         setCurrentFormData(data || {});
-        // Update JSON preview
-        setJsonPreview(JSON.stringify(data || {}, null, 2));
     }, [activeTab, selectedId, projects, timeline, gallery, globalSettings]);
 
     const handleFormChange = ({ formData }) => {
         setCurrentFormData(formData);
-        setJsonPreview(JSON.stringify(formData, null, 2));
+    };
+
+    const handleTabChange = (tabId) => {
+        setActiveTab(tabId);
+        setSelectedId(tabId === 'settings' ? 'global' : null);
     };
 
     const handleSave = ({ formData }) => {
@@ -133,7 +131,7 @@ export default function CMSProjectEditor({ onClose }) {
                     {tabs.map(t => (
                         <button
                             key={t.id}
-                            onClick={() => { setActiveTab(t.id); setSelectedId(null); }}
+                            onClick={() => handleTabChange(t.id)}
                             className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${activeTab === t.id ? 'bg-bg-elevated text-accent shadow-sm' : 'text-text-secondary hover:text-text-primary'}`}
                         >
                             <t.icon size={16} /> <span className="hidden sm:inline">{t.label}</span>

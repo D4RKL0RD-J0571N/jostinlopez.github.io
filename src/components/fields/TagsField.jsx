@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
  * Custom Widget for RJSF to handle Tag arrays.
  * Using a Widget instead of a Field for better compatibility and scoped updates.
  */
-export const TagsWidget = ({ value, onChange, placeholder, options }) => {
+export const TagsWidget = ({ value, onChange, placeholder }) => {
     const [inputValue, setInputValue] = useState('');
     const tags = Array.isArray(value) ? value : [];
 
