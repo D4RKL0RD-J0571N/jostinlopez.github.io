@@ -88,7 +88,7 @@ export default function Hero() {
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </motion.a>
                         <motion.a
-                            href="/resume.pdf"
+                            href="resume.pdf"
                             download="Jostin_Lopez_Resume.pdf"
                             whileHover={{ scale: 1.05, backgroundColor: "var(--bg-surface)", borderColor: "var(--accent)", color: "var(--accent)" }}
                             whileTap={{ scale: 0.95 }}
