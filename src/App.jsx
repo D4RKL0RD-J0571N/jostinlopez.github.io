@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ProjectEditor from './components/ProjectEditor';
+import ProjectEditor from './components/CMSProjectEditor';
 import { applyTheme } from './utils/applyTheme';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';

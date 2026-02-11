@@ -35,8 +35,8 @@ export default function Navbar() {
             scrolled ? "bg-bg-base/90 backdrop-blur-md border-b border-bg-elevated" : "bg-transparent"
         )}>
             <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-                <a href="#" className="font-mono text-xl font-bold text-text-primary hover:text-accent transition-colors">
-                    J0571N
+                <a href="#" className="font-sans text-xl font-bold text-text-primary hover:text-accent transition-colors">
+                    Jostin López
                 </a>
 
                 {/* Desktop Nav */}

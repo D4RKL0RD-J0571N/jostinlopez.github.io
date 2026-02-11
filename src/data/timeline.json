@@ -1,16 +1,37 @@
 [
     {
         "id": "role-1",
-        "period": "2024 — Present",
-        "title": "Enterprise AI & CRM",
-        "description": "Developing scalable orchestration layers for AI agents and high-throughput CRM integrations.",
+        "period": "2021 — Present",
+        "title": "Independent Software Engineer / Systems Developer",
+        "description": "Designed and implemented modular systems for games, backend tools, and AI-driven platforms. Focused on scalable architectures, local LLM integration, and production-ready prototypes demonstrating full-cycle development.",
         "isCurrent": true
     },
     {
         "id": "role-2",
-        "period": "2021 — 2024",
-        "title": "Full-Stack Engineer",
-        "description": "Built and maintained complex web ecosystems, microservices, and specialized internal tools.",
+        "period": "2023 — 2025",
+        "title": "Customer Support & Technical Advisor — ExtremeTech",
+        "description": "Provided technical support for computer hardware/software, resolving complex issues with analytical precision. Improved internal troubleshooting procedures and contributed to a more efficient support environment.",
+        "isCurrent": false
+    },
+    {
+        "id": "role-3",
+        "period": "2022 — 2023",
+        "title": "Bar Operations & Service Lead — Caccio’s Rock Bar-Restaurant",
+        "description": "Led operations, coordinated staff, and maintained quality standards under pressure. Gained leadership, reliability, and team management experience in a high-paced environment.",
+        "isCurrent": false
+    },
+    {
+        "id": "role-4",
+        "period": "2018 — 2020",
+        "title": "General Support & Maintenance Assistant — Almacenes Siman",
+        "description": "Assisted with logistics, maintenance, and inventory processes. Supported technical and mechanical operations including electrical systems and air conditioning maintenance.",
+        "isCurrent": false
+    },
+    {
+        "id": "role-5",
+        "period": "Education & Self-Learning",
+        "title": "Computer Systems Engineering (Paused) — Universidad Fidélitas / Animation & Visual Design — Universidad Veritas",
+        "description": "Blended formal education in computer systems with independent learning in software engineering, game development, and AI integration — maintaining a continuous self-study discipline through real-world projects.",
         "isCurrent": false
     }
 ]

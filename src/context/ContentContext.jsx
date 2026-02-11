@@ -74,7 +74,7 @@ export const ContentProvider = ({ children }) => {
             fontHeading: 'Inter',
             fontBody: 'Inter',
             formEndpoint: '',
-            email: 'contact@jostinlopez.com',
+            email: 'jostinlopezsobalbarro@gmail.com',
             github: 'https://github.com/D4RKL0RD-J0571N',
             linkedin: 'https://www.linkedin.com/in/jostin-lopez-b761261bb/',
             resumeUrl: '/resume.pdf'
@@ -169,7 +169,7 @@ export const ContentProvider = ({ children }) => {
             fontHeading: 'Inter',
             fontBody: 'Inter',
             formEndpoint: '',
-            email: 'contact@jostinlopez.com',
+            email: 'jostinlopezsobalbarro@gmail.com',
             github: 'https://github.com/D4RKL0RD-J0571N',
             linkedin: 'https://www.linkedin.com/in/jostin-lopez-b761261bb/',
             resumeUrl: '/resume.pdf'
@@ -189,6 +189,14 @@ export const ContentProvider = ({ children }) => {
         setLegalModal(prev => ({ ...prev, isOpen: false }));
     };
 
+    const addTimelineItem = (item) => setTimeline(prev => [item, ...prev]);
+    const updateTimelineItem = (id, data) => setTimeline(prev => prev.map(i => i.id === id ? { ...i, ...data } : i));
+    const deleteTimelineItem = (id) => setTimeline(prev => prev.filter(i => i.id !== id));
+
+    const addGalleryItem = (item) => setGallery(prev => [item, ...prev]);
+    const updateGalleryItem = (id, data) => setGallery(prev => prev.map(i => i.id === id ? { ...i, ...data } : i));
+    const deleteGalleryItem = (id) => setGallery(prev => prev.filter(i => i.id !== id));
+
     const value = {
         projects,
         timeline,
@@ -205,7 +213,12 @@ export const ContentProvider = ({ children }) => {
         resetData,
         openLegalModal,
         closeLegalModal,
-        setTimeline // Exposed if we want to edit timeline in the future
+        addTimelineItem,
+        updateTimelineItem,
+        deleteTimelineItem,
+        addGalleryItem,
+        updateGalleryItem,
+        deleteGalleryItem
     };
 
     return (

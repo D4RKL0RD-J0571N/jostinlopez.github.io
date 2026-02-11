@@ -9,7 +9,7 @@ export default function ProjectEditor({ onClose }) {
     const {
         projects, addProject, updateProject, deleteProject,
         sectionOrder, moveProject, moveSection,
-        globalSettings, updateSettings
+        globalSettings, updateSettings, resetData
     } = useContent();
 
     const [activeTab, setActiveTab] = useState('projects'); // projects, layout, json, settings
@@ -390,6 +390,23 @@ export default function ProjectEditor({ onClose }) {
                                             <input type="text" value={globalSettings.resumeUrl || ''} onChange={(e) => updateSettings({ resumeUrl: e.target.value })} className={inputClasses} placeholder="/resume.pdf" />
                                         </div>
                                     </div>
+                                </div>
+
+                                <div className="pt-10 border-t border-red-500/20 space-y-4">
+                                    <label className="text-sm font-bold text-red-500 uppercase tracking-widest block">Danger Zone</label>
+                                    <p className="text-sm text-text-secondary">This will clear your browser's local cache and restore the portfolios's default data from the JSON files.</p>
+                                    <button
+                                        onClick={() => {
+                                            if (window.confirm('WARNING: This will delete all your local changes and reset the site to default. Continue?')) {
+                                                resetData();
+                                                window.location.reload();
+                                            }
+                                        }}
+                                        className="inline-flex items-center gap-2 px-6 py-3 bg-red-500/10 text-red-500 border border-red-500/20 rounded-lg font-bold hover:bg-red-500 hover:text-white transition-all active:scale-95"
+                                    >
+                                        <Trash2 size={18} />
+                                        Reset to Default Data
+                                    </button>
                                 </div>
                             </div>
                         </div>

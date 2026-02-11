@@ -1,12 +1,12 @@
 [
   {
     "id": "crm-orchestrator",
-    "title": "Enterprise AI CRM Orchestrator",
+    "title": "Enterprise AI CRM — Human-in-the-Loop Orchestrator",
     "category": "AI",
     "featured": true,
-    "thumbnail": "assets/project-placeholder.png",
-    "description": "A scalable orchestrator for enterprise CRM systems, integrating LLMs for automated customer support.",
-    "long_description": "Designed and built a high-throughput orchestration layer that routes customer queries to specialized AI agents. Handled context management, rate limiting, and fallback to human agents. Built with Python (FastAPI), Redis for state, and LangChain for LLM flow control.",
+    "thumbnail": "https://imgur.com/DGzM0aG.png",
+    "description": "Compliance-first AI orchestration framework for regulated businesses — combining automation, human oversight, and observability.",
+    "long_description": "Designed and built a production-grade AI orchestration framework integrating Local LLMs with WhatsApp for secure, auditable, and human-supervised customer communication. Implements deterministic safety guardrails, real-time Human-in-the-Loop workflows, and dynamic intent routing to maintain full operational control over AI-generated content. Powered by FastAPI, React, and WebSockets with detailed observability through Prometheus metrics, hybrid runtime configuration, and white-label theming for enterprise deployment.",
     "tags": [
       "Python",
       "FastAPI",
@@ -15,8 +15,8 @@
       "Docker"
     ],
     "links": {
-      "repo": "https://github.com/D4RKL0RD-J0571N",
-      "demo": ""
+      "repo": "https://github.com/D4RKL0RD-J0571N/Enterprise-AI-CRM-Human-in-the-Loop-Orchestrator",
+      "demo": "https://github.com/D4RKL0RD-J0571N/Enterprise-AI-CRM-Human-in-the-Loop-Orchestrator"
     }
   },
   {
@@ -24,43 +24,85 @@
     "title": "Local AI Companion Framework",
     "category": "AI",
     "featured": true,
-    "thumbnail": "assets/project-placeholder.png",
-    "description": "A privacy-focused framework for running personal AI assistants locally on consumer hardware.",
-    "long_description": "Developed a modular framework to deploy and manage quantized LLMs locally. Features include a plugin system for deskop integration, memory management for long-term context, and a strictly local-first data policy.",
+    "thumbnail": "https://imgur.com/si8FdWo.png",
+    "description": "Privacy-first framework for building personal AI assistants that run locally without cloud dependency.",
+    "long_description": "Developed a modular, offline AI companion framework with contextual memory and persona persistence. Implements a local-first data policy ensuring full privacy and no cloud communication. The system provides dialogue flow management, persona modeling, and quantized model support for consumer GPUs. Designed for desktop environments using C# for interface logic and Python for model inference orchestration.",
     "tags": [
       "Python",
       "PyTorch",
       "Local LLM",
-      "Privacy"
+      "Electron"
     ],
     "links": {
-      "repo": "https://github.com/D4RKL0RD-J0571N",
-      "demo": ""
+      "repo": "https://github.com/D4RKL0RD-J0571N/local-ai-companion",
+      "demo": "https://github.com/D4RKL0RD-J0571N/local-ai-companion"
+    }
+  },
+  {
+    "id": "resourcemanager",
+    "title": "ResourceManager — TypeScript Backend Toolkit",
+    "category": "Web",
+    "featured": true,
+    "thumbnail": "https://imgur.com/R8QdckG.png",
+    "description": "Modular TypeScript backend toolkit for scalable resource management — focused on clean service architecture and maintainable design.",
+    "long_description": "ResourceManager is a TypeScript-first backend toolkit for structured resource management—built solo to explore robust, maintainable architectures for web APIs and services. Demonstrates clean design, reusability, and modular implementations of typical backend patterns: CRUD logic, role/permission layers, request handling, and data validation. Built to refine my understanding of scalable codebases and system modularity, especially relevant to modern SaaS and cloud APIs.",
+    "tags": [
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Node.js"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N/resourcemanager",
+      "demo": "https://github.com/D4RKL0RD-J0571N/resourcemanager"
     }
   },
   {
     "id": "3d-learning",
-    "title": "3D Learning Prototype",
+    "title": "3D Learning Prototype — Modular Game Architecture & Persistence",
     "category": "Game Systems",
-    "featured": false,
+    "featured": true,
     "thumbnail": "assets/project-placeholder.png",
-    "description": "Interactive 3D environment for spatial learning and visualization experiments.",
+    "description": "Interactive 3D prototype exploring modular game systems for learning, progression, and data persistence.",
+    "long_description": "Designed and built a Unity-based 3D prototype demonstrating scalable system architecture for learning mechanics and player progression. Implements an Entity–Attribute–Progression (EAP) framework using Inversion of Control principles. Includes runtime serialization, modular data-driven saving/loading, and flexible component registration to support expandable gameplay systems.",
     "tags": [
       "Unity",
       "C#",
-      "Education"
+      "ScriptableObjects",
+      "Modular Architecture"
     ],
     "links": {
-      "repo": "https://github.com/D4RKL0RD-J0571N"
+      "repo": "https://github.com/D4RKL0RD-J0571N/3D-Learning-Prototype",
+      "demo": "https://github.com/D4RKL0RD-J0571N/3D-Learning-Prototype"
+    }
+  },
+  {
+    "id": "elms",
+    "title": "Echo-Location Maze System (ELMS)",
+    "category": "Game Systems",
+    "featured": true,
+    "thumbnail": "assets/project-placeholder.png",
+    "description": "Unity prototype focused on procedural generation, system decoupling, and designer-centric tooling.",
+    "long_description": "ELMS is a self-contained demonstration of procedural logic, decoupled architecture, and runtime adaptability in Unity. Each mechanic is written to be extendable, designer-friendly, and data-driven—embodying a systems-first approach to gameplay. Features echo-based reveal mechanics and flexible editor tooling for rapid iteration.",
+    "tags": [
+      "C#",
+      "ShaderLab",
+      "Unity",
+      "HLSL"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N/MazePrototype",
+      "demo": "https://www.youtube.com/watch?v=9TGZjnqw-4M"
     }
   },
   {
     "id": "rpgmz-video",
-    "title": "RPGMZ Video Plugin",
-    "category": "Game Systems",
+    "title": "Custom HTML5 Video Playback Plugin (RPG Maker MZ)",
+    "category": "Tools",
     "featured": false,
     "thumbnail": "assets/project-placeholder.png",
-    "description": "Plugin for RPG Maker MZ extending video playback capabilities for interactive storytelling.",
+    "description": "Extended RPG Maker MZ video playback system for cinematic control and interactive storytelling.",
+    "long_description": "Developed a JavaScript plugin expanding RPG Maker MZ’s video engine for dynamic playback and player interaction. Features playback speed control, looping, fade transitions, and contextual skip logic integrated directly into the engine’s interpreter. Enhances narrative flexibility and user engagement for cinematic gameplay experiences.",
     "tags": [
       "JavaScript",
       "RPG Maker",
@@ -68,22 +110,6 @@
     ],
     "links": {
       "repo": "https://github.com/D4RKL0RD-J0571N/RPGMZ-plugins"
-    }
-  },
-  {
-    "id": "genai-experiments",
-    "title": "Generative AI Research Experiments",
-    "category": "Tools",
-    "featured": false,
-    "thumbnail": "assets/project-placeholder.png",
-    "description": "A collection of experiments in generative art, audio synthesis, and style transfer.",
-    "tags": [
-      "Python",
-      "Stable Diffusion",
-      "Audio"
-    ],
-    "links": {
-      "repo": "https://github.com/D4RKL0RD-J0571N"
     }
   }
 ]

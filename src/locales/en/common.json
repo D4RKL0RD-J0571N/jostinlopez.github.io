@@ -10,23 +10,23 @@
         "terms": "Terms of Service"
     },
     "hero": {
-        "greeting": "J0571N",
+        "greeting": "Jostin López",
         "titles": [
-            "Creative Technologist",
-            "Systems Engineer",
-            "GenAI Experimenter"
+            "Software Engineer",
+            "AI Engineer",
+            "Systems Developer"
         ],
-        "subtitle": "I build the invisible machinery that makes worlds and systems come alive. Bridging the gap between logic, art, and intelligence.",
+        "subtitle": "I create tools, systems, and interactive experiences that connect software with human intent.",
         "cta": {
-            "projects": "See Projects",
-            "cv": "Download CV"
+            "projects": "View Projects",
+            "cv": "Download Resume"
         },
         "scroll": "Scroll Down"
     },
     "about": {
         "title": "About Me",
-        "bio1": "I’m a self-taught creative technologist who builds systems where logic, art, and intelligence converge. I design modular runtime systems for games, build scalable backends and real-time workflows, and engineer local-first generative AI pipelines that prioritize reproducibility and customization.",
-        "bio2": "I ship prototypes and production tooling across Unity, FastAPI, and PyTorch — and I also produce creative work (2D illustration, audio, print design). I thrive on connecting research and practical engineering to create tools and experiences that empower creators.",
+        "bio1": "I'm a self-taught developer passionate about engineering systems that blend creativity and logic. My work spans backend development, AI integration, and game systems — from building orchestrators for LLM-driven workflows to designing modular Unity architectures.",
+        "bio2": "I enjoy pushing technical boundaries, crafting tools that feel alive, and understanding how humans interact with technology.",
         "skills": {
             "engineering": "Creative Engineering",
             "ai": "Generative AI",
@@ -53,8 +53,8 @@
         "disclaimer": "Visual works & experiments. To be populated with real assets."
     },
     "contact": {
-        "title": "Let's Build Something Extraordinary",
-        "subtitle": "Open for opportunities in Systems Engineering, AI, and Creative Tech.",
+        "title": "Get In Touch",
+        "subtitle": "Whether you’re working on something technical, creative, or experimental — I’m always open to connect and collaborate. The best way to reach me is by email or LinkedIn.",
         "emailLabel": "Email Me",
         "emailAction": "Click to copy email",
         "resumeLabel": "Resume",

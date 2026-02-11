@@ -1,0 +1,198 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Portfolio Configuration",
+    "type": "object",
+    "properties": {
+        "globalSettings": {
+            "type": "object",
+            "title": "Global Settings",
+            "properties": {
+                "accentColor": {
+                    "type": "string",
+                    "title": "Accent Color",
+                    "default": "#3b82f6",
+                    "ui:widget": "color"
+                },
+                "email": {
+                    "type": "string",
+                    "title": "Public Email",
+                    "format": "email"
+                },
+                "github": {
+                    "type": "string",
+                    "title": "GitHub Profile URL",
+                    "format": "uri"
+                },
+                "linkedin": {
+                    "type": "string",
+                    "title": "LinkedIn Profile URL",
+                    "format": "uri"
+                },
+                "resumeUrl": {
+                    "type": "string",
+                    "title": "Resume URL/Path"
+                },
+                "formEndpoint": {
+                    "type": "string",
+                    "title": "Contact Form Endpoint",
+                    "format": "uri",
+                    "description": "Formspree or similar endpoint"
+                }
+            }
+        },
+        "projects": {
+            "type": "array",
+            "title": "Projects",
+            "items": {
+                "type": "object",
+                "title": "Project",
+                "required": [
+                    "title",
+                    "description"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "ID",
+                        "description": "Unique identifier (slug safe)"
+                    },
+                    "featured": {
+                        "type": "boolean",
+                        "title": "Featured",
+                        "default": false
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Project Title"
+                    },
+                    "category": {
+                        "type": "string",
+                        "title": "Category",
+                        "enum": [
+                            "AI",
+                            "Game Systems",
+                            "Tools",
+                            "Creative",
+                            "Full Stack",
+                            "Web",
+                            "Other"
+                        ],
+                        "default": "AI"
+                    },
+                    "thumbnail": {
+                        "type": "string",
+                        "title": "Thumbnail URL",
+                        "default": "assets/project-placeholder.png"
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "Short Description",
+                        "ui:widget": "textarea"
+                    },
+                    "long_description": {
+                        "type": "string",
+                        "title": "Detailed Description",
+                        "ui:widget": "textarea",
+                        "ui:options": {
+                            "rows": 5
+                        }
+                    },
+                    "tags": {
+                        "type": "array",
+                        "title": "Technologies & Tools",
+                        "items": {
+                            "type": "string"
+                        },
+                        "ui:widget": "tags"
+                    },
+                    "links": {
+                        "type": "object",
+                        "title": "Links",
+                        "properties": {
+                            "repo": {
+                                "type": "string",
+                                "title": "Repository URL",
+                                "format": "uri"
+                            },
+                            "demo": {
+                                "type": "string",
+                                "title": "Live Demo URL",
+                                "format": "uri"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "timeline": {
+            "type": "array",
+            "title": "Timeline / Experience",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "ID"
+                    },
+                    "period": {
+                        "type": "string",
+                        "title": "Period",
+                        "examples": [
+                            "2024 — Present"
+                        ]
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Role / Title"
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "Description",
+                        "ui:widget": "textarea"
+                    },
+                    "isCurrent": {
+                        "type": "boolean",
+                        "title": "Current Role"
+                    }
+                }
+            }
+        },
+        "gallery": {
+            "type": "array",
+            "title": "Gallery Items",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "ID"
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "examples": [
+                            "AI Art",
+                            "3D",
+                            "UI/UX"
+                        ]
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "Color Class",
+                        "description": "Tailwind color classes e.g. opacity-10 bg-accent"
+                    }
+                }
+            }
+        }
+    },
+    "ui:order": [
+        "globalSettings",
+        "projects",
+        "timeline",
+        "gallery"
+    ]
+}

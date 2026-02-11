@@ -10,23 +10,23 @@
         "terms": "Términos de Servicio"
     },
     "hero": {
-        "greeting": "J0571N",
+        "greeting": "Jostin López",
         "titles": [
-            "Tecnólogo Creativo",
-            "Ingeniero de Sistemas",
-            "Experimentador GenAI"
+            "Ingeniero de Software",
+            "Ingeniero de IA",
+            "Desarrollador de Sistemas"
         ],
-        "subtitle": "Construyo la maquinaria invisible que da vida a mundos y sistemas. Uniendo la lógica, el arte y la inteligencia.",
+        "subtitle": "Creo herramientas, sistemas y experiencias interactivas que conectan el software con la intención humana.",
         "cta": {
             "projects": "Ver Proyectos",
-            "cv": "Descargar CV"
+            "cv": "Descargar Currículum"
         },
         "scroll": "Desplazarse"
     },
     "about": {
         "title": "Sobre Mí",
-        "bio1": "Soy un tecnólogo creativo autodidacta que construye sistemas donde convergen la lógica, el arte y la inteligencia. Diseño sistemas modulares en tiempo real para videojuegos, construyo backends escalables y flujos de trabajo en tiempo real, e ingeniero pipelines de IA generativa local-first que priorizan la reproducibilidad y la personalización.",
-        "bio2": "Desarrollo prototipos y herramientas de producción en Unity, FastAPI y PyTorch — y también produzco trabajo creativo (ilustración 2D, audio, diseño de impresión). Me apasiona conectar la investigación con la ingeniería práctica para crear herramientas y experiencias que empoderen a los creadores.",
+        "bio1": "Soy un desarrollador autodidacta apasionado por la ingeniería de sistemas que combinan creatividad y lógica. Mi trabajo abarca desde el desarrollo backend, la integración de IA y sistemas de juegos, hasta la construcción de orquestadores para flujos de trabajo basados en LLM y el diseño de arquitecturas modulares en Unity.",
+        "bio2": "Disfruto desafiando los límites técnicos, creando herramientas que se sientan vivas y comprendiendo cómo los humanos interactúan con la tecnología.",
         "skills": {
             "engineering": "Ingeniería Creativa",
             "ai": "IA Generativa",
@@ -53,8 +53,8 @@
         "disclaimer": "Obras visuales y experimentos. Se poblará con activos reales."
     },
     "contact": {
-        "title": "Construyamos Algo Extraordinario",
-        "subtitle": "Abierto a oportunidades en Ingeniería de Sistemas, IA y Tecnología Creativa.",
+        "title": "Ponte en Contacto",
+        "subtitle": "Ya sea que estés trabajando en algo técnico, creativo o experimental, siempre estoy abierto a conectar y colaborar. La mejor manera de contactarme es por correo electrónico o LinkedIn.",
         "emailLabel": "Envíame un correo",
         "emailAction": "Clic para copiar correo",
         "resumeLabel": "Currículum",

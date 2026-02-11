@@ -194,8 +194,8 @@ export default function Contact() {
                 <div className="flex flex-col h-full">
                     <div className="bg-bg-base p-4 border-b border-bg-elevated flex justify-end">
                         <a
-                            href={globalSettings.resumeUrl || "/resume.pdf"}
-                            download
+                            href="/resume.pdf"
+                            download="Jostin_Lopez_Resume.pdf"
                             className="btn-primary px-4 py-2 text-sm"
                         >
                             <Download size={18} className="mr-2" />
@@ -204,7 +204,7 @@ export default function Contact() {
                     </div>
                     <div className="flex-grow bg-bg-surface flex items-center justify-center p-4">
                         <iframe
-                            src={`${globalSettings.resumeUrl || "/resume.pdf"}#toolbar=0`}
+                            src="/resume.pdf#toolbar=0"
                             className="w-full h-[70vh] rounded shadow-2xl border border-bg-elevated"
                             title="Resume Preview"
                         />

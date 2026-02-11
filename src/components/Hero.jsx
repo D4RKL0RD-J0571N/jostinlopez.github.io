@@ -89,7 +89,7 @@ export default function Hero() {
                         </motion.a>
                         <motion.a
                             href="/resume.pdf"
-                            download
+                            download="Jostin_Lopez_Resume.pdf"
                             whileHover={{ scale: 1.05, backgroundColor: "var(--bg-surface)", borderColor: "var(--accent)", color: "var(--accent)" }}
                             whileTap={{ scale: 0.95 }}
                             className="btn-ghost"
