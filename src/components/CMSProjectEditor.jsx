@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Save, Plus, Trash2, Settings, FileJson, Layers, Image as ImageIcon, Calendar, Smartphone, Monitor } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
@@ -8,6 +8,8 @@ import portfolioSchema from '../data/portfolio.schema.json';
 
 // Helper to generate IDs
 const generateId = (prefix) => `${prefix}-${Date.now().toString(36)}`;
+
+
 
 export default function CMSProjectEditor({ onClose }) {
     const {
@@ -20,31 +22,38 @@ export default function CMSProjectEditor({ onClose }) {
     const [activeTab, setActiveTab] = useState('projects'); // projects, timeline, gallery, settings, json
     const [selectedId, setSelectedId] = useState(null);
 
-    // Prepare Schema & Data based on selection
-    const [currentSchema, setCurrentSchema] = useState(null);
-    const [currentFormData, setCurrentFormData] = useState(null);
+    // Derived Schema
+    const currentSchema = useMemo(() => {
+        if (activeTab === 'settings') return portfolioSchema.properties.globalSettings;
+        if (activeTab === 'projects') return portfolioSchema.properties.projects.items;
+        if (activeTab === 'timeline') return portfolioSchema.properties.timeline.items;
+        if (activeTab === 'gallery') return portfolioSchema.properties.gallery.items;
+        return null;
+    }, [activeTab]);
 
-    // Sync form data when selection changes
-    useEffect(() => {
-        let schema, data;
+    // Track the form data state
+    const [currentFormData, setCurrentFormData] = useState({});
 
+    // Track selection to detect changes
+    const [prevSelection, setPrevSelection] = useState({ tab: 'projects', id: null });
+
+    // Sync form data when selection changes during render (React recommended pattern)
+    if (activeTab !== prevSelection.tab || selectedId !== prevSelection.id) {
+        setPrevSelection({ tab: activeTab, id: selectedId });
+
+        // Find the data based on new selection
+        let data = {};
         if (activeTab === 'settings') {
-            schema = portfolioSchema.properties.globalSettings;
             data = globalSettings;
         } else if (activeTab === 'projects') {
-            schema = portfolioSchema.properties.projects.items;
             data = selectedId ? projects.find(p => p.id === selectedId) : null;
         } else if (activeTab === 'timeline') {
-            schema = portfolioSchema.properties.timeline.items;
             data = selectedId ? timeline.find(t => t.id === selectedId) : null;
         } else if (activeTab === 'gallery') {
-            schema = portfolioSchema.properties.gallery.items;
             data = selectedId ? gallery.find(g => g.id === selectedId) : null;
         }
-
-        setCurrentSchema(schema);
         setCurrentFormData(data || {});
-    }, [activeTab, selectedId, projects, timeline, gallery, globalSettings]);
+    }
 
     const handleFormChange = ({ formData }) => {
         setCurrentFormData(formData);
