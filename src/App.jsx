@@ -92,7 +92,7 @@ function AppContent() {
   };
 
   return (
-    <div className="bg-bg-base min-h-screen text-text-primary selection:bg-accent/30 selection:text-accent font-sans">
+    <div className="bg-bg-base min-h-screen text-text-primary selection:bg-accent selection:text-white font-sans">
       <ScrollProgress />
 
       {showEditor ? (
@@ -127,7 +127,7 @@ function AppContent() {
 
           <button
             onClick={() => setShowEditor(true)}
-            className="fixed bottom-6 right-6 z-[90] p-4 bg-bg-surface/50 hover:bg-bg-elevated border border-white/10 rounded-full text-text-secondary hover:text-accent shadow-2xl backdrop-blur-md transition-all group scale-90 hover:scale-100"
+            className="fixed bottom-6 right-6 z-[90] p-4 bg-bg-surface hover:bg-bg-elevated border border-white/10 rounded-full text-text-secondary hover:text-accent shadow-2xl backdrop-blur-md transition-all group scale-90 hover:scale-100"
             title="Open CMS (Ctrl+Shift+E)"
           >
             <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>

@@ -104,7 +104,7 @@ export const ContentProvider = ({ children }) => {
         localStorage.setItem('portfolio_settings', JSON.stringify(globalSettings));
         // Real-time CSS Variable Injection with RGB support
         if (globalSettings.accentColor) {
-            document.documentElement.style.setProperty('--accent', hexToRgbChannels(globalSettings.accentColor));
+            document.documentElement.style.setProperty('--accent-rgb', hexToRgbChannels(globalSettings.accentColor));
         }
     }, [globalSettings]);
 

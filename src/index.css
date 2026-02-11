@@ -4,16 +4,20 @@
 
 :root {
   /* Colors */
-  --bg-base: #0f172a;
-  --bg-surface: rgba(30, 41, 59, 0.5);
-  --bg-elevated: #334155;
-  --bg-hover: #475569;
+  /* RGB Channels for dynamic utilities */
+  --bg-base-rgb: 15 23 42;
+  --bg-surface-rgb: 30 41 59;
+  --bg-elevated-rgb: 51 65 85;
+  --bg-hover-rgb: 71 85 105;
+  --accent-rgb: 45 212 191;
 
-  --accent: 45 212 191;
-  /* RGB channels for teal-400 equivalent */
+  --bg-base: rgb(var(--bg-base-rgb));
+  --bg-surface: rgba(var(--bg-surface-rgb), 0.5);
+  --bg-elevated: rgb(var(--bg-elevated-rgb));
+  --bg-hover: rgb(var(--bg-hover-rgb));
+  --accent: rgb(var(--accent-rgb));
   --accent-hover: #14b8a6;
-  /* Kept as hex for solid colors if needed, or convert to RGB if used with opacity */
-  --accent-glow: rgb(var(--accent) / 0.2);
+  --accent-glow: rgba(var(--accent-rgb), 0.2);
 
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
@@ -88,7 +92,7 @@ select {
 
   .btn-primary {
     @apply inline-flex items-center justify-center px-8 py-4 font-bold rounded-lg transition-all active:scale-95 shadow-lg;
-    background-color: rgb(var(--accent));
+    background-color: var(--accent);
     color: var(--bg-base);
     box-shadow: 0 4px 14px 0 var(--accent-glow);
   }
