@@ -70,7 +70,9 @@ function AppContent() {
     applyTheme();
 
     const handleKeyDown = (e) => {
-      if (e.ctrlKey && e.shiftKey && (e.key === 'E' || e.key === 'e')) {
+      // Only allow CMS in development or localhost
+      const isDev = import.meta.env.DEV || window.location.hostname === 'localhost';
+      if (isDev && e.ctrlKey && e.shiftKey && e.key === 'E') {
         setShowEditor(prev => !prev);
       }
     };

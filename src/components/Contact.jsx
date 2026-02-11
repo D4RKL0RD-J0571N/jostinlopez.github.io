@@ -72,10 +72,10 @@ export default function Contact() {
                 >
                     <div className="text-center mb-16">
                         <h2 className="font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-text-primary to-text-secondary" style={{ fontSize: 'var(--h2)' }}>
-                            {t('contact.title')}
+                            {t('contact.heading')}
                         </h2>
                         <p className="text-text-secondary text-lg">
-                            {t('contact.subtitle')}
+                            {t('contact.message')}
                         </p>
                     </div>
 
@@ -135,7 +135,7 @@ export default function Contact() {
                                     required
                                     autoComplete="name"
                                     className="w-full bg-bg-base border border-bg-elevated rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent transition-all"
-                                    placeholder="Jostin López"
+                                    placeholder="John Doe"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -148,7 +148,7 @@ export default function Contact() {
                                     autoComplete="email"
                                     spellCheck={false}
                                     className="w-full bg-bg-base border border-bg-elevated rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-accent transition-all"
-                                    placeholder="jostinlopezsobalbarro@gmail.com"
+                                    placeholder="john@example.com"
                                 />
                             </div>
                             <div className="space-y-2">

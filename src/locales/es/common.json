@@ -10,23 +10,20 @@
         "terms": "Términos de Servicio"
     },
     "hero": {
-        "greeting": "Jostin López",
+        "name": "Jostin López",
         "titles": [
             "Ingeniero de Software",
             "Ingeniero de IA",
             "Desarrollador de Sistemas"
         ],
         "subtitle": "Creo herramientas, sistemas y experiencias interactivas que conectan el software con la intención humana.",
-        "cta": {
-            "projects": "Ver Proyectos",
-            "cv": "Descargar Currículum"
-        },
+        "ctaPrimary": "Ver Proyectos",
+        "ctaSecondary": "Descargar Currículum",
         "scroll": "Desplazarse"
     },
     "about": {
-        "title": "Sobre Mí",
-        "bio1": "Soy un desarrollador autodidacta apasionado por la ingeniería de sistemas que combinan creatividad y lógica. Mi trabajo abarca desde el desarrollo backend, la integración de IA y sistemas de juegos, hasta la construcción de orquestadores para flujos de trabajo basados en LLM y el diseño de arquitecturas modulares en Unity.",
-        "bio2": "Disfruto desafiando los límites técnicos, creando herramientas que se sientan vivas y comprendiendo cómo los humanos interactúan con la tecnología.",
+        "heading": "Sobre Mí",
+        "content": "Soy un desarrollador autodidacta apasionado por la ingeniería de sistemas que combinan creatividad y lógica. Mi trabajo abarca desde el desarrollo backend, la integración de IA y sistemas de juegos, hasta la construcción de orquestadores para flujos de trabajo basados en LLM y el diseño de arquitecturas modulares en Unity. Disfruto desafiando los límites técnicos, creando herramientas que se sientan vivas y comprendiendo cómo los humanos interactúan con la tecnología.",
         "skills": {
             "engineering": "Ingeniería Creativa",
             "ai": "IA Generativa",
@@ -53,8 +50,8 @@
         "disclaimer": "Obras visuales y experimentos. Se poblará con activos reales."
     },
     "contact": {
-        "title": "Ponte en Contacto",
-        "subtitle": "Ya sea que estés trabajando en algo técnico, creativo o experimental, siempre estoy abierto a conectar y colaborar. La mejor manera de contactarme es por correo electrónico o LinkedIn.",
+        "heading": "Ponte en Contacto",
+        "message": "Ya sea que estés trabajando en algo técnico, creativo o experimental, siempre estoy abierto a conectar y colaborar. La mejor manera de contactarme es por correo electrónico o LinkedIn.",
         "emailLabel": "Envíame un correo",
         "emailAction": "Clic para copiar correo",
         "resumeLabel": "Currículum",

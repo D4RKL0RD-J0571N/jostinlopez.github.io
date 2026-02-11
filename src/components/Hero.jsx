@@ -53,7 +53,7 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="font-mono text-accent text-lg mb-4 block tracking-wider">
-                        {t('hero.greeting')}
+                        {t('hero.name')}
                     </span>
 
                     <h1 className="text-4xl md:text-7xl font-bold mb-6 text-text-primary h-[3.5em] md:h-[auto] leading-tight">
@@ -84,7 +84,7 @@ export default function Hero() {
                             whileTap={{ scale: 0.95 }}
                             className="btn-primary"
                         >
-                            {t('hero.cta.projects')}
+                            {t('hero.ctaPrimary')}
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </motion.a>
                         <motion.a
@@ -94,7 +94,7 @@ export default function Hero() {
                             whileTap={{ scale: 0.95 }}
                             className="btn-ghost"
                         >
-                            {t('hero.cta.cv')}
+                            {t('hero.ctaSecondary')}
                             <Download className="ml-2 w-5 h-5" />
                         </motion.a>
                     </div>

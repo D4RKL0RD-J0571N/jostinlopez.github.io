@@ -19,7 +19,7 @@ export default function About() {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold inline-block relative after:content-[''] after:absolute after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-accent after:rounded-full text-text-primary">
-                        {t('about.title')}
+                        {t('about.heading')}
                     </h2>
                 </div>
 
@@ -52,8 +52,7 @@ export default function About() {
 
                             <div className="space-y-6 text-center md:text-left">
                                 <div className="space-y-4 text-text-secondary text-lg leading-relaxed">
-                                    <p>{t('about.bio1')}</p>
-                                    <p>{t('about.bio2')}</p>
+                                    <p>{t('about.content')}</p>
                                 </div>
                             </div>
                         </div>
