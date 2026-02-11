@@ -70,9 +70,8 @@ function AppContent() {
     applyTheme();
 
     const handleKeyDown = (e) => {
-      // Only allow CMS in development or localhost
-      const isDev = import.meta.env.DEV || window.location.hostname === 'localhost';
-      if (isDev && e.ctrlKey && e.shiftKey && e.key === 'E') {
+      // Allow CMS in all environments for the user to manage content
+      if (e.ctrlKey && e.shiftKey && e.key === 'E') {
         setShowEditor(prev => !prev);
       }
     };
@@ -125,12 +124,20 @@ function AppContent() {
             </div>
             <p>&copy; {new Date().getFullYear()} {t('footer.text')}</p>
           </footer>
+
+          <button
+            onClick={() => setShowEditor(true)}
+            className="fixed bottom-6 right-6 z-[90] p-4 bg-bg-surface/50 hover:bg-bg-elevated border border-white/10 rounded-full text-text-secondary hover:text-accent shadow-2xl backdrop-blur-md transition-all group scale-90 hover:scale-100"
+            title="Open CMS (Ctrl+Shift+E)"
+          >
+            <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>
+              <Layers size={22} className="group-hover:scale-110 transition-transform" />
+            </motion.div>
+          </button>
         </>
       )}
 
       <LegalModal />
-
-      <div className="hidden">Admin shortcuts enabled: Ctrl+Shift+E</div>
     </div>
   );
 }
