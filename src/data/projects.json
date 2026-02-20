@@ -1,5 +1,24 @@
 [
   {
+    "id": "nebula-view",
+    "featured": true,
+    "title": "NebulaView - A Provider-First Content Discovery",
+    "category": "Full Stack",
+    "thumbnail": "https://github.com/D4RKL0RD-J0571N/nebula-view/blob/main/public/logo.jpg",
+    "description": "A visually dynamic, bilingual (EN / ES-419) media discovery web application powered by TMDB. Explore movies, TV shows, and anime with an immersive, reactive interface.",
+    "long_description": "NebulaView - A Provider-First Content Discovery System using Consumet extensions for meta enrichment and multi-provider streaming. Discover movies, TV shows, and anime with intelligent provider fallback, automated skill-based reviews, and comprehensive governance.",
+    "tags": [
+      "TypeScript",
+      "Next.js",
+      "Supabase",
+      "Redis"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N/nebula-view",
+      "demo": "https://nebula-view.vercel.app/"
+    }
+  },
+  {
     "id": "crm-orchestrator",
     "title": "Enterprise AI CRM — Human-in-the-Loop Orchestrator",
     "category": "AI",
@@ -102,7 +121,7 @@
     "featured": false,
     "thumbnail": "assets/project-placeholder.png",
     "description": "Extended RPG Maker MZ video playback system for cinematic control and interactive storytelling.",
-    "long_description": "Developed a JavaScript plugin expanding RPG Maker MZ’s video engine for dynamic playback and player interaction. Features playback speed control, looping, fade transitions, and contextual skip logic integrated directly into the engine’s interpreter. Enhances narrative flexibility and user engagement for cinematic gameplay experiences.",
+    "long_description": "Developed a JavaScript plugin expanding RPG Maker MZ's video engine for dynamic playback and player interaction. Features playback speed control, looping, fade transitions, and contextual skip logic integrated directly into the engine's interpreter. Enhances narrative flexibility and user engagement for cinematic gameplay experiences.",
     "tags": [
       "JavaScript",
       "RPG Maker",
