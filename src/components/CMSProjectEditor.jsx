@@ -194,7 +194,7 @@ export default function CMSProjectEditor({ onClose }) {
 
                 {/* Main Form Area */}
                 <main className="flex-grow flex flex-col md:flex-row overflow-hidden bg-bg-base relative">
-                    {(activeTab === 'settings' || selectedId || (!selectedId && activeTab !== 'settings')) ? (
+                    {(activeTab === 'settings' || selectedId || (!selectedId && activeTab !== 'settings' && activeTab !== 'sync')) ? (
                         <>
                             {/* Form Column */}
                             <div className="flex-1 w-full border-r border-bg-elevated overflow-y-auto p-8 lg:p-12 relative scrollbar-thin pb-32">
