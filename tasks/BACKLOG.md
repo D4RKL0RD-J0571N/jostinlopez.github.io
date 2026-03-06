@@ -44,7 +44,7 @@
 
 | ID | Task | Priority | Status | Spec |
 |---|---|---|---|---|
-| GS-003 | Create useGitHubSync hook | P3 | `TODO` | `specs/GITHUB_SYNC.md#GS-003` |
+| GS-003 | Create useGitHubSync hook | P3 | `DONE` | `specs/GITHUB_SYNC.md#GS-003` |
 | GS-004 | Create GitHubSyncPanel component | P3 | `TODO` | `specs/GITHUB_SYNC.md#GS-004` |
 | GS-005 | GitHub Webhook auto-redeploy | P3 | `TODO` | `specs/GITHUB_SYNC.md#GS-005` |
 

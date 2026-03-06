@@ -110,3 +110,15 @@
 **Why:** Backend requirement for the GitHub Sync feature. Ensures data integrity for new project imports.
 **Trade-offs:** None.
 **Risks:** None.
+
+---
+
+### 2026-03-06 02:18 — GS-003 Create src/hooks/useGitHubSync.js
+**Role:** SYNCER
+**Files changed:** `src/hooks/useGitHubSync.js`, `src/hooks/useGitHubSync.test.jsx` (created)
+**What:** Implemented the `useGitHubSync` custom React hook and its corresponding suite of unit tests. The hook manages repository fetching from the `/api/github-repos` endpoint and automatically calculates a list of "unsynced" repositories by comparing the fetched data with the existing portfolio project list.
+**Why:** First step of the frontend phase (Phase 3) for the GitHub Sync feature. Enables the UI component to manage synchronization state.
+**Trade-offs:** None.
+**Risks:** Depends on the backend API (GS-001) working as expected. Tests currently use mocks to decouple from the live API.
+**Compliance:** Matches `specs/GITHUB_SYNC.md § GS-003` exactly.
+
