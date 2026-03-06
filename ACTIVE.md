@@ -6,7 +6,7 @@
 
 ## Session — 2026-03-05 23:50
 **Role:** ARCHITECT → MIGRATOR
-**Task:** ARCH-001, M-001, M-002, M-003
+**Task:** ARCH-001, M-001, M-002, M-003, M-004, M-005
 **Spec:** AGENTS.md §Governance Files Reference, specs/MIGRATION.md
 **Status:** Done
 
@@ -15,6 +15,8 @@
 - [x] M-001: Remove GH Pages base path from vite.config.js
 - [x] M-002: Add vercel.json with SPA rewrite rule
 - [x] M-003: Disable GitHub Actions deploy workflow
+- [x] M-004: Create .env.example with all Vercel env vars
+- [x] M-005: Create api/ directory with README
 - [x] Fix OG URL in index.html (migration cleanup)
 - [x] Gate: `npm run build` passes ✅
 - [x] Log all changes to audit/CHANGELOG.md
@@ -22,11 +24,11 @@
 ### Blockers
 None
 
-## Session End — 2026-03-05 23:55
-**Completed:** ARCH-001, M-001, M-002, M-003, OG URL fix
-**Pending:** M-004 (.env.example), M-005 (api/ directory)
-**Next:** M-004 (recommended — completes P1 migration)
-**Logged:** audit/CHANGELOG.md entries: ARCH-001, M-001, M-002, M-003, OG URL cleanup
+## Session End — 2026-03-06 02:05
+**Completed:** Full Vercel migration (M-001 through M-005) + governance restructure (ARCH-001)
+**Pending:** Phase 2 — GitHub Sync (GS-001+). Gate: Connect Vercel project to repo first.
+**Next:** GS-001 (create api/github-repos.js) — requires Vercel project connected
+**Logged:** audit/CHANGELOG.md entries: ARCH-001, M-001, M-002, M-003, M-004, M-005, OG URL cleanup
 
 ---
 

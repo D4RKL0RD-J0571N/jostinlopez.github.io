@@ -26,8 +26,8 @@
 | M-001 | Remove GH Pages base path from vite.config.js | P0 | `DONE` | `specs/MIGRATION.md#M-001` |
 | M-002 | Add vercel.json with SPA rewrite rule | P0 | `DONE` | `specs/MIGRATION.md#M-002` |
 | M-003 | Disable GitHub Actions deploy workflow | P1 | `DONE` | `specs/MIGRATION.md#M-003` |
-| M-004 | Add .env.example with Vercel env vars | P1 | `TODO` | `specs/MIGRATION.md#M-004` |
-| M-005 | Create /api/ directory and stub README | P2 | `TODO` | `specs/MIGRATION.md#M-005` |
+| M-004 | Add .env.example with Vercel env vars | P1 | `DONE` | `specs/MIGRATION.md#M-004` |
+| M-005 | Create /api/ directory and stub README | P2 | `DONE` | `specs/MIGRATION.md#M-005` |
 
 ---
 

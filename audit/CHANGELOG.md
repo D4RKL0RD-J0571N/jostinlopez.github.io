@@ -70,3 +70,23 @@
 **Why:** OG URL must match the canonical deployment URL. Using placeholder until real Vercel domain is confirmed.
 **Trade-offs:** ⚠️ **ACTION REQUIRED**: Update this URL once the actual Vercel domain/custom domain is confirmed.
 **Risks:** Low — placeholder is functionally correct for Vercel's default subdomain.
+
+---
+
+### 2026-03-06 02:03 — M-004 Add .env.example
+**Role:** MIGRATOR
+**Files changed:** `.env.example` (created)
+**What:** Created `.env.example` with all four required env vars: `GITHUB_TOKEN`, `VITE_GITHUB_USERNAME`, `WEBHOOK_SECRET`, `VERCEL_DEPLOY_HOOK_URL`. Confirmed `*.local` in `.gitignore` covers `.env.local`.
+**Why:** Documents required environment variables for any developer or deployment target. Server-side tokens use plain names; only `VITE_GITHUB_USERNAME` uses the `VITE_` prefix for safe frontend bundling.
+**Trade-offs:** None.
+**Risks:** None.
+
+---
+
+### 2026-03-06 02:03 — M-005 Create /api/ directory and stub README
+**Role:** MIGRATOR
+**Files changed:** `api/README.md` (created)
+**What:** Created `api/` directory with `README.md` documenting route conventions, planned routes (GS-001 through GS-005), required env vars, and local dev instructions (`npx vercel dev`).
+**Why:** Establishes the API surface area and conventions before any serverless function is written. Serves as onboarding doc for Phase 2.
+**Trade-offs:** None.
+**Risks:** None.
