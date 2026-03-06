@@ -149,11 +149,18 @@ export default function CMSProjectEditor({ onClose }) {
 
     const handleDelete = () => {
         if (!selectedId || activeTab === 'settings') return;
-        if (window.confirm('Are you sure you want to delete this item?')) {
-            if (activeTab === 'projects') deleteProject(selectedId);
-            if (activeTab === 'timeline') deleteTimelineItem(selectedId);
-            if (activeTab === 'gallery') deleteGalleryItem(selectedId);
+
+        if (window.confirm(`Are you sure you want to delete this ${activeTab} item?`)) {
+            console.log(`[CMS] Deleting ${selectedId} from ${activeTab}`);
+            const idToDelete = selectedId;
+
+            // Clear selection FIRST to prevent safe-sync from trying to find the deleted item
             setSelectedId(null);
+            setCurrentFormData({});
+
+            if (activeTab === 'projects') deleteProject(idToDelete);
+            if (activeTab === 'timeline') deleteTimelineItem(idToDelete);
+            if (activeTab === 'gallery') deleteGalleryItem(idToDelete);
         }
     };
 

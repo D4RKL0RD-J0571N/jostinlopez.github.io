@@ -119,7 +119,8 @@ export const ContentProvider = ({ children }) => {
     };
 
     const deleteProject = (id) => {
-        setProjects(prev => prev.filter(p => p.id !== id));
+        console.log('[ContentContext] Deleting project:', id);
+        setProjects(prev => prev.filter(p => String(p.id) !== String(id)));
     };
 
     const moveProject = (id, direction) => {
