@@ -152,6 +152,7 @@ export default function CMSProjectEditor({ onClose }) {
                 setAuthError(data.error || 'Access denied.');
             }
         } catch (err) {
+            console.error('[CMS] Auth failure:', err);
             setAuthError('Network failure during authentication.');
         } finally {
             setIsAuthLoading(false);
