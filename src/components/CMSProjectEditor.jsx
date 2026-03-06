@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Save, Plus, Trash2, Settings, FileJson, Layers, Image as ImageIcon, Calendar, RefreshCw, Lock, Unlock, Loader2, CheckCircle, Smartphone, Monitor } from 'lucide-react';
+import { ArrowLeft, Save, Plus, Trash2, Settings, FileJson, Layers, Image as ImageIcon, Calendar, RefreshCw, Lock, Unlock, Loader2, CheckCircle, Smartphone, Monitor, AlertTriangle } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import SchemaForm from './SchemaForm';
 import SchemaPreview from './SchemaPreview';
@@ -28,6 +28,7 @@ export default function CMSProjectEditor({ onClose }) {
     const [isAuthLoading, setIsAuthLoading] = useState(false);
     const [isPersisting, setIsPersisting] = useState(false);
     const [persistenceStatus, setPersistenceStatus] = useState(null); // 'success', 'error', null
+    const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
     // Derived Schema
     const currentSchema = useMemo(() => {
@@ -109,16 +110,26 @@ export default function CMSProjectEditor({ onClose }) {
         setIsPersisting(true);
         setPersistenceStatus(null);
 
-        const res = await persistToGitHub(password || sessionStorage.getItem('cms_session'));
+        try {
+            console.log('[CMS] Handshake: Persisting to Remote');
+            const authSecret = password || sessionStorage.getItem('cms_session');
+            const res = await persistToGitHub(authSecret);
 
-        if (res.success) {
-            setPersistenceStatus('success');
-            setTimeout(() => setPersistenceStatus(null), 3000);
-        } else {
+            if (res.success) {
+                setPersistenceStatus('success');
+                setTimeout(() => setPersistenceStatus(null), 3000);
+            } else {
+                setPersistenceStatus('error');
+                console.error('[CMS] Save Error:', res.error);
+                alert(`Sync Failure: ${res.error}`);
+            }
+        } catch (err) {
+            console.error('[CMS] Persistence Crash:', err);
             setPersistenceStatus('error');
-            alert(`Persistence Error: ${res.error}`);
+            alert('A critical error inhibited your push. Check the logs.');
+        } finally {
+            setIsPersisting(false);
         }
-        setIsPersisting(false);
     };
 
     const handleLogin = async (e) => {
@@ -149,18 +160,24 @@ export default function CMSProjectEditor({ onClose }) {
 
     const handleDelete = () => {
         if (!selectedId || activeTab === 'settings') return;
+        setShowDeleteConfirm(true);
+    };
 
-        if (window.confirm(`Are you sure you want to delete this ${activeTab} item?`)) {
-            console.log(`[CMS] Deleting ${selectedId} from ${activeTab}`);
+    const confirmDelete = () => {
+        try {
+            console.log(`[CMS] Executing custom deletion: ${selectedId}`);
             const idToDelete = selectedId;
 
-            // Clear selection FIRST to prevent safe-sync from trying to find the deleted item
+            // UI Update First
             setSelectedId(null);
             setCurrentFormData({});
+            setShowDeleteConfirm(false);
 
             if (activeTab === 'projects') deleteProject(idToDelete);
-            if (activeTab === 'timeline') deleteTimelineItem(idToDelete);
-            if (activeTab === 'gallery') deleteGalleryItem(idToDelete);
+            else if (activeTab === 'timeline') deleteTimelineItem(idToDelete);
+            else if (activeTab === 'gallery') deleteGalleryItem(idToDelete);
+        } catch (err) {
+            console.error('[CMS] Logic error in ConfirmDelete:', err);
         }
     };
 
@@ -323,17 +340,23 @@ export default function CMSProjectEditor({ onClose }) {
 
                                 <div className="rjsf-container max-w-5xl mx-auto">
                                     {currentSchema && (
-                                        <SchemaForm
-                                            schema={currentSchema}
-                                            formData={currentFormData}
-                                            onChange={handleFormChange}
-                                            onSubmit={handleSave}
-                                            uiSchema={uiSchema}
-                                        >
-                                            <div className="fixed bottom-0 left-0 right-0 md:left-auto md:right-[450px] 2xl:right-[600px] bg-bg-base/95 backdrop-blur-xl border-t border-bg-elevated p-6 z-40 flex justify-end">
+                                        <div className="space-y-12">
+                                            <SchemaForm
+                                                schema={currentSchema}
+                                                formData={currentFormData}
+                                                onChange={handleFormChange}
+                                                onSubmit={handleSave}
+                                                uiSchema={uiSchema}
+                                            >
+                                                {/* Hidden submit so we can trigger it via the bar below if needed */}
+                                                <button type="submit" className="hidden" id="cms-hidden-submit" />
+                                            </SchemaForm>
+
+                                            <div className="fixed bottom-0 left-0 right-0 md:left-auto md:right-[450px] 2xl:right-[600px] bg-bg-base/95 backdrop-blur-xl border-t border-bg-elevated p-6 z-[60] flex justify-end">
                                                 <div className="max-w-5xl w-full flex justify-end gap-4">
                                                     <button
-                                                        type="submit"
+                                                        type="button"
+                                                        onClick={() => document.getElementById('cms-hidden-submit')?.click()}
                                                         className="py-3 px-6 rounded-xl border border-bg-elevated hover:bg-bg-elevated transition-all text-sm font-medium"
                                                     >
                                                         Review Local Change
@@ -351,7 +374,7 @@ export default function CMSProjectEditor({ onClose }) {
                                                     </button>
                                                 </div>
                                             </div>
-                                        </SchemaForm>
+                                        </div>
                                     )}
 
                                     {activeTab === 'settings' && (
@@ -395,6 +418,55 @@ export default function CMSProjectEditor({ onClose }) {
                     ))}
                 </main>
             </div>
+
+            {/* Custom Confirmation Modal */}
+            <AnimatePresence>
+                {showDeleteConfirm && (
+                    <div className="fixed inset-0 z-[110] flex items-center justify-center p-6 sm:p-0">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setShowDeleteConfirm(false)}
+                            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                        />
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            className="relative bg-bg-surface border border-bg-elevated rounded-3xl p-8 max-w-sm w-full shadow-2xl space-y-6"
+                        >
+                            <div className="flex flex-col items-center text-center space-y-4">
+                                <div className="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center border border-red-500/20">
+                                    <AlertTriangle className="text-red-500" size={32} />
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-bold">Delete Record?</h3>
+                                    <p className="text-text-secondary text-sm">
+                                        Are you sure you want to permanently remove this {activeTab} entry? This will be staged in your local checkout.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col gap-3">
+                                <button
+                                    onClick={confirmDelete}
+                                    className="w-full py-4 bg-red-500 hover:bg-red-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95"
+                                >
+                                    <Trash2 size={18} />
+                                    Confirm Deletion
+                                </button>
+                                <button
+                                    onClick={() => setShowDeleteConfirm(false)}
+                                    className="w-full py-4 bg-bg-elevated hover:bg-bg-elevated/80 text-text-primary rounded-xl font-bold transition-all"
+                                >
+                                    Keep it
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
 
             {/* Styles for RJSF to match dark theme roughly */}
             <style>{`
