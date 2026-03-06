@@ -90,3 +90,23 @@
 **Why:** Establishes the API surface area and conventions before any serverless function is written. Serves as onboarding doc for Phase 2.
 **Trade-offs:** None.
 **Risks:** None.
+
+---
+
+### 2026-03-06 02:15 — GS-001 Create api/github-repos.js
+**Role:** SYNCER
+**Files changed:** `api/github-repos.js` (created)
+**What:** Implemented the GitHub repository retrieval endpoint. It fetches repositories for the configured username, filters out forks/private repos, and maps them to the project structure defined in the spec.
+**Why:** Backend requirement for the GitHub Sync feature. Enables the client to see what repos aren't yet in their portfolio.
+**Trade-offs:** None.
+**Risks:** Depends on GitHub API availability and a valid GITHUB_TOKEN.
+
+---
+
+### 2026-03-06 02:20 — GS-002 Create api/sync-projects.js
+**Role:** SYNCER
+**Files changed:** `api/sync-projects.js` (created), `package.json` (ajv-formats added)
+**What:** Implemented a stateless project validation and merge endpoint. It ensures any new project data conforms to `src/config/projects.schema.json` using Ajv.
+**Why:** Backend requirement for the GitHub Sync feature. Ensures data integrity for new project imports.
+**Trade-offs:** None.
+**Risks:** None.

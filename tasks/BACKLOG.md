@@ -35,8 +35,8 @@
 
 | ID | Task | Priority | Status | Spec |
 |---|---|---|---|---|
-| GS-001 | Create /api/github-repos.js | P2 | `TODO` | `specs/GITHUB_SYNC.md#GS-001` |
-| GS-002 | Create /api/sync-projects.js | P2 | `TODO` | `specs/GITHUB_SYNC.md#GS-002` |
+| GS-001 | Create /api/github-repos.js | P2 | `DONE` | `specs/GITHUB_SYNC.md#GS-001` |
+| GS-002 | Create /api/sync-projects.js | P2 | `DONE` | `specs/GITHUB_SYNC.md#GS-002` |
 
 ---
 
