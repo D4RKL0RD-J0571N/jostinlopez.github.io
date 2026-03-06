@@ -115,6 +115,7 @@ export default function CMSProjectEditor({ onClose }) {
      * Switches tab to projects, clears selection (New), and fills form with draft data.
      */
     const handleSyncImport = (projectDraft) => {
+        setPrevSelection({ tab: 'projects', id: null });
         setActiveTab('projects');
         setSelectedId(null);
         setCurrentFormData(projectDraft);
