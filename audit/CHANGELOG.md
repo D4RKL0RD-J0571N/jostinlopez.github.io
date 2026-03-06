@@ -142,4 +142,21 @@
 **Trade-offs:** Deferring reduces immediate automation but simplifies maintenance and secret management.
 **Risks:** None.
 
+---
+
+### 2026-03-06 03:05 — Phase 4: CMS Auth & Persistence (CP-001/002)
+**Role:** PERSISTER / SYNCER
+**Files changed:** `specs/CMS_PERSISTENCE.md` (created), `api/auth.js` (created), `api/save-content.js` (created), `src/components/CMSProjectEditor.jsx` (updated), `src/context/ContentContext.jsx` (updated), `src/config/projects.schema.json` (updated)
+**What:** Secured the CMS with a required password gate and implemented an automated 'Push to GitHub' data persistence layer.
+**Why:** Directly fulfills the user's request for security (preventing random users from accessing the CMS) and 'automatic saving' (eliminating manual JSON push steps).
+**Implementation:**
+- `/api/auth`: Verifies a `CMS_ADMIN_PASSWORD` (securely gatable via Vercel).
+- `/api/save-content`: Commits updated JSON files back to GitHub via the `GITHUB_TOKEN`.
+- **GS-006**: Curated project categories (enum: AI, Game Dev, etc.) for better discovery.
+- **CMSGate**: Created a premium, locked modal in the UI to handle the login flow.
+- **Sync UI**: Added a 'Push to GitHub' button in the CMS editor with loading/success states.
+**Trade-offs:** Pushing to GitHub multiple times triggers Vercel builds, but for a personal portfolio, this is an acceptable trade-off versus a dedicated database. 
+**Compliance:** Matches `specs/CMS_PERSISTENCE.md` completely.
+
+
 

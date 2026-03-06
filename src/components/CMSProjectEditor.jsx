@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Save, Plus, Trash2, Settings, FileJson, Layers, Image as ImageIcon, Calendar, RefreshCw, Smartphone, Monitor } from 'lucide-react';
+import { ArrowLeft, Save, Plus, Trash2, Settings, FileJson, Layers, Image as ImageIcon, Calendar, RefreshCw, Lock, Unlock, Loader2, CheckCircle, Smartphone, Monitor } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import SchemaForm from './SchemaForm';
 import SchemaPreview from './SchemaPreview';
@@ -17,11 +17,17 @@ export default function CMSProjectEditor({ onClose }) {
         projects, addProject, updateProject, deleteProject,
         timeline, addTimelineItem, updateTimelineItem, deleteTimelineItem,
         gallery, addGalleryItem, updateGalleryItem, deleteGalleryItem,
-        globalSettings, updateSettings, resetData
+        globalSettings, updateSettings, resetData, persistToGitHub
     } = useContent();
 
-    const [activeTab, setActiveTab] = useState('projects'); // projects, timeline, gallery, settings, json
+    const [activeTab, setActiveTab] = useState('projects');
     const [selectedId, setSelectedId] = useState(null);
+    const [isAuthorized, setIsAuthorized] = useState(() => !!sessionStorage.getItem('cms_session'));
+    const [password, setPassword] = useState('');
+    const [authError, setAuthError] = useState('');
+    const [isAuthLoading, setIsAuthLoading] = useState(false);
+    const [isPersisting, setIsPersisting] = useState(false);
+    const [persistenceStatus, setPersistenceStatus] = useState(null); // 'success', 'error', null
 
     // Derived Schema
     const currentSchema = useMemo(() => {
@@ -93,6 +99,52 @@ export default function CMSProjectEditor({ onClose }) {
                 setSelectedId(newId);
             }
         }
+
+        // After internal update, optionally persistent to GitHub
+        // We'll leave the actual persistence to the "Sync to GitHub" button for now
+        // so the user can review all changes before committing.
+    };
+
+    const handlePersist = async () => {
+        setIsPersisting(true);
+        setPersistenceStatus(null);
+
+        const res = await persistToGitHub(password || sessionStorage.getItem('cms_session'));
+
+        if (res.success) {
+            setPersistenceStatus('success');
+            setTimeout(() => setPersistenceStatus(null), 3000);
+        } else {
+            setPersistenceStatus('error');
+            alert(`Persistence Error: ${res.error}`);
+        }
+        setIsPersisting(false);
+    };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        setIsAuthLoading(true);
+        setAuthError('');
+
+        try {
+            const res = await fetch('/api/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password })
+            });
+            const data = await res.json();
+
+            if (data.authorized) {
+                setIsAuthorized(true);
+                sessionStorage.setItem('cms_session', password);
+            } else {
+                setAuthError(data.error || 'Access denied.');
+            }
+        } catch (err) {
+            setAuthError('Network failure during authentication.');
+        } finally {
+            setIsAuthLoading(false);
+        }
     };
 
     const handleDelete = () => {
@@ -138,6 +190,57 @@ export default function CMSProjectEditor({ onClose }) {
             "ui:widget": "tags"
         }
     };
+
+    if (!isAuthorized) {
+        return (
+            <div className="fixed inset-0 z-[100] bg-bg-base flex items-center justify-center p-6">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="bg-bg-surface border border-bg-elevated p-10 rounded-3xl max-w-md w-full shadow-2xl space-y-8"
+                >
+                    <div className="text-center space-y-4">
+                        <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto border border-accent/20">
+                            <Lock size={40} className="text-accent" />
+                        </div>
+                        <h2 className="text-2xl font-bold">CMS Authorization</h2>
+                        <p className="text-text-secondary text-sm">Enter your administrative password to access the CMS Command Center.</p>
+                    </div>
+
+                    <form onSubmit={handleLogin} className="space-y-6">
+                        <div className="space-y-2">
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                placeholder="Admin Password"
+                                className="w-full bg-bg-base border border-bg-elevated rounded-xl p-4 text-center focus:border-accent transition-all outline-none"
+                                autoFocus
+                            />
+                            {authError && <p className="text-red-400 text-xs text-center font-bold">{authError}</p>}
+                        </div>
+
+                        <button
+                            type="submit"
+                            disabled={isAuthLoading}
+                            className="w-full btn-primary py-4 rounded-xl font-bold flex items-center justify-center gap-2 group"
+                        >
+                            {isAuthLoading ? <Loader2 size={20} className="animate-spin" /> : (
+                                <>
+                                    <Unlock size={20} className="group-hover:scale-110 transition-transform" />
+                                    Unlock Command Center
+                                </>
+                            )}
+                        </button>
+                    </form>
+
+                    <button onClick={onClose} className="w-full text-text-secondary text-xs hover:text-text-primary transition-colors">
+                        Return to Site
+                    </button>
+                </motion.div>
+            </div>
+        );
+    }
 
     return (
         <div className="fixed inset-0 z-[100] bg-bg-base flex flex-col overflow-hidden text-text-primary select-text selection:bg-accent/30">
@@ -222,8 +325,22 @@ export default function CMSProjectEditor({ onClose }) {
                                         >
                                             <div className="fixed bottom-0 left-0 right-0 md:left-auto md:right-[450px] 2xl:right-[600px] bg-bg-base/95 backdrop-blur-xl border-t border-bg-elevated p-6 z-40 flex justify-end">
                                                 <div className="max-w-5xl w-full flex justify-end gap-4">
-                                                    <button type="submit" className="btn-primary py-3 px-8 rounded-xl flex items-center gap-3 shadow-2xl shadow-accent/20 hover:scale-[1.02] active:scale-[0.98] transition-all font-bold">
-                                                        <Save size={20} /> Persist Changes
+                                                    <button
+                                                        type="submit"
+                                                        className="py-3 px-6 rounded-xl border border-bg-elevated hover:bg-bg-elevated transition-all text-sm font-medium"
+                                                    >
+                                                        Review Local Change
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        onClick={handlePersist}
+                                                        disabled={isPersisting}
+                                                        className={`btn-primary py-3 px-8 rounded-xl flex items-center gap-3 shadow-2xl shadow-accent/20 hover:scale-[1.02] active:scale-[0.98] transition-all font-bold ${persistenceStatus === 'success' ? 'bg-green-600 scale-[1.05]' : ''}`}
+                                                    >
+                                                        {isPersisting ? <Loader2 size={20} className="animate-spin" /> : (
+                                                            persistenceStatus === 'success' ? <CheckCircle size={20} /> : <Save size={20} />
+                                                        )}
+                                                        {isPersisting ? 'Syncing...' : (persistenceStatus === 'success' ? 'Changes Pushed!' : 'Push to GitHub')}
                                                     </button>
                                                 </div>
                                             </div>

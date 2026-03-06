@@ -197,6 +197,34 @@ export const ContentProvider = ({ children }) => {
     const updateGalleryItem = (id, data) => setGallery(prev => prev.map(i => i.id === id ? { ...i, ...data } : i));
     const deleteGalleryItem = (id) => setGallery(prev => prev.filter(i => i.id !== id));
 
+    const persistToGitHub = async (password) => {
+        const payload = [
+            { path: 'src/data/projects.json', content: projects },
+            { path: 'src/data/timeline.json', content: timeline },
+            { path: 'src/data/gallery.json', content: gallery },
+            { path: 'src/data/settings.json', content: globalSettings } // If you have settings.json
+        ];
+
+        try {
+            for (const item of payload) {
+                const res = await fetch('/api/save-content', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ ...item, password })
+                });
+
+                if (!res.ok) {
+                    const err = await res.json();
+                    throw new Error(err.error || `Failed to save ${item.path}`);
+                }
+            }
+            return { success: true };
+        } catch (err) {
+            console.error('[ContentContext] Persistence failed:', err);
+            return { success: false, error: err.message };
+        }
+    };
+
     const value = {
         projects,
         timeline,
@@ -218,7 +246,8 @@ export const ContentProvider = ({ children }) => {
         deleteTimelineItem,
         addGalleryItem,
         updateGalleryItem,
-        deleteGalleryItem
+        deleteGalleryItem,
+        persistToGitHub
     };
 
     return (

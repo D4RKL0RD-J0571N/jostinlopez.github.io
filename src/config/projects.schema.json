@@ -25,7 +25,16 @@
             "type": "string"
         },
         "category": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+                "AI & Machine Learning",
+                "Game Development",
+                "Tools & Utilities",
+                "Creative Technology",
+                "Full Stack Development",
+                "Web Architecture",
+                "Other"
+            ]
         },
         "tags": {
             "type": "array",

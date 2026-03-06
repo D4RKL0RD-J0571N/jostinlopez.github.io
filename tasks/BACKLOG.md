@@ -48,6 +48,14 @@
 | GS-004 | Create GitHubSyncPanel component | P3 | `DONE` | `specs/GITHUB_SYNC.md#GS-004` |
 | GS-005 | GitHub Webhook auto-redeploy | P3 | `DEFERRED` | `specs/GITHUB_SYNC.md#GS-005` |
 
+## Phase 4 — CMS Persistence & Auth (P4)
+
+| ID | Task | Priority | Status | Spec |
+|---|---|---|---|---|
+| GS-006 | Update categories in projects schema | P3 | `DONE` | `specs/CMS_PERSISTENCE.md` |
+| CP-001 | Implement CMS Auth Gate (UI & API) | P4 | `DONE` | `specs/CMS_PERSISTENCE.md#CP-001` |
+| CP-002 | Implement Git-based Save API | P4 | `DONE` | `specs/CMS_PERSISTENCE.md#CP-002` |
+
 ---
 
 ## Deferred / Future
