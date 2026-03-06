@@ -1,4 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
+# ⚠️ DISABLED: Vercel now handles deployment (see specs/MIGRATION.md § M-003)
 name: Deploy static content to Pages
 
 on:
@@ -24,6 +25,7 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    if: false  # Disabled: Vercel handles deployment. Re-enable only if reverting to GitHub Pages.
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
