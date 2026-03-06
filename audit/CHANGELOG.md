@@ -122,3 +122,24 @@
 **Risks:** Depends on the backend API (GS-001) working as expected. Tests currently use mocks to decouple from the live API.
 **Compliance:** Matches `specs/GITHUB_SYNC.md § GS-003` exactly.
 
+---
+
+### 2026-03-06 02:22 — GS-004 Create GitHubSyncPanel.jsx
+**Role:** SYNCER
+**Files changed:** `src/components/GitHubSyncPanel.jsx` (created), `src/components/CMSProjectEditor.jsx` (integrated), `e2e/github-sync.spec.js` (created)
+**What:** Implemented the UI for GitHub repository discovery and import. Integrated it as a new tab in the CMS editor. Added a Playwright E2E test to verify the full 'Discover → Import → Edit' workflow.
+**Why:** Finalizes the user-facing part of the GitHub Sync feature. Allows the user to easily keep their portfolio up to date without manual data entry.
+**Trade-offs:** None.
+**Risks:** UI depends on the `useGitHubSync` hook. E2E tests use API mocking for reliability in the CI environment.
+
+---
+
+### 2026-03-06 02:25 — GS-005 Defer Webhook implementation
+**Role:** SYNCER
+**Files changed:** `audit/DECISIONS.md` (ADR-002 added), `tasks/BACKLOG.md` (status update)
+**What:** Formally deferred the optional GitHub Webhook feature per ADR-002.
+**Why:** Requires manual Vercel/GitHub configuration (secrets) that cannot be fully automated in this session. Vercel's native Git sync already handles most redeploy needs.
+**Trade-offs:** Deferring reduces immediate automation but simplifies maintenance and secret management.
+**Risks:** None.
+
+

@@ -1,4 +1,4 @@
-import { renderHook, waitFor, act } from '@testing-library/react';
+import { renderHook, act } from '@testing-library/react';
 import { useGitHubSync } from './useGitHubSync';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 

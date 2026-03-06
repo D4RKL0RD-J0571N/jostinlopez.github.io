@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Save, Plus, Trash2, Settings, FileJson, Layers, Image as ImageIcon, Calendar, Smartphone, Monitor } from 'lucide-react';
+import { ArrowLeft, Save, Plus, Trash2, Settings, FileJson, Layers, Image as ImageIcon, Calendar, RefreshCw, Smartphone, Monitor } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import SchemaForm from './SchemaForm';
 import SchemaPreview from './SchemaPreview';
+import GitHubSyncPanel from './GitHubSyncPanel';
 import portfolioSchema from '../data/portfolio.schema.json';
 
 // Helper to generate IDs
@@ -109,10 +110,21 @@ export default function CMSProjectEditor({ onClose }) {
         setCurrentFormData({});
     };
 
+    /**
+     * Bridges GitHub sync discovery with Project drafting.
+     * Switches tab to projects, clears selection (New), and fills form with draft data.
+     */
+    const handleSyncImport = (projectDraft) => {
+        setActiveTab('projects');
+        setSelectedId(null);
+        setCurrentFormData(projectDraft);
+    };
+
     const tabs = [
         { id: 'projects', icon: Layers, label: 'Projects' },
         { id: 'timeline', icon: Calendar, label: 'Timeline' },
         { id: 'gallery', icon: ImageIcon, label: 'Gallery' },
+        { id: 'sync', icon: RefreshCw, label: 'GitHub Sync' },
         { id: 'settings', icon: Settings, label: 'Global' },
         // { id: 'json', icon: FileJson, label: 'JSON' } // Could implement full JSON view later
     ];
@@ -151,7 +163,7 @@ export default function CMSProjectEditor({ onClose }) {
 
             <div className="flex-grow flex overflow-hidden">
                 {/* Sidebar List */}
-                {activeTab !== 'settings' && (
+                {activeTab !== 'settings' && activeTab !== 'sync' && (
                     <aside className="w-64 border-r border-bg-elevated flex flex-col bg-bg-surface/30 z-20">
                         <div className="p-4 border-b border-bg-elevated flex justify-between items-center">
                             <span className="text-xs font-bold text-text-secondary uppercase tracking-wider">{activeTab}</span>
@@ -243,6 +255,11 @@ export default function CMSProjectEditor({ onClose }) {
                                 <SchemaPreview data={currentFormData} />
                             </div>
                         </>
+                    ) : (activeTab === 'sync' ? (
+                        <GitHubSyncPanel
+                            existingProjects={projects}
+                            onImport={handleSyncImport}
+                        />
                     ) : (
                         <div className="flex-grow flex items-center justify-center text-text-secondary">
                             <div className="text-center">
@@ -250,7 +267,7 @@ export default function CMSProjectEditor({ onClose }) {
                                 <p>Select an item to edit</p>
                             </div>
                         </div>
-                    )}
+                    ))}
                 </main>
             </div>
 
