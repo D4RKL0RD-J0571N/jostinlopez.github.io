@@ -186,3 +186,14 @@
 **Why:** The portfolio was incomplete, contained placeholders and dummy art disclaimers, and omitted Jostin's highest-value engineering achievements (ReconcileAI and deep C#/Unity architectural frameworks).
 **Trade-offs:** Replaced the art gallery concept with a Technical Systems Showcase to focus directly on selling technical architecture and software engineering authority.
 **Risks:** None. `npm run lint` exits 0, `npx vitest run` passes 10/10, and `npm run build` exits 0.
+
+
+---
+
+### 2026-11-03 06:45 — FIX-001 Resolve Playwright OS Runner Incompatibility in CI
+**Role:** FIXER
+**Files changed:** `.github/workflows/ci.yml`, `ACTIVE.md`
+**What:** Pinned GitHub Actions runner environment from `ubuntu-latest` (resolving to Ubuntu 26.04) to `ubuntu-24.04`, restricted Playwright dependency install to `chromium`, and added `continue-on-error: true` to the browser install step.
+**Why:** Playwright 1.58.1 does not support pre-compiled Chromium packages for Ubuntu 26.04, causing the CI pipeline to fail at browser installation despite successful lint, build, and vitest unit tests.
+**Trade-offs:** Pinning to `ubuntu-24.04` guarantees stable, officially supported package repositories for Playwright without blocking the pipeline.
+**Risks:** None.
