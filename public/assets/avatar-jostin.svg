@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </linearGradient>
+    <linearGradient id="avatar-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="avatar-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#14b8a6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="32" fill="url(#avatar-bg)"/>
+  
+  <!-- Subtle circular grid -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,6" opacity="0.4"/>
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="8,8" opacity="0.3"/>
+
+  <!-- Developer Silhouette with Tech Visor -->
+  <!-- Shoulders -->
+  <path d="M 100 340 C 100 280, 140 250, 200 250 C 260 250, 300 280, 300 340 Z" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <path d="M 120 340 C 120 295, 150 270, 200 270 C 250 270, 280 295, 280 340 Z" fill="#0f172a"/>
+
+  <!-- Neck -->
+  <rect x="182" y="210" width="36" height="50" rx="4" fill="#334155"/>
+
+  <!-- Head Base -->
+  <rect x="145" y="110" width="110" height="120" rx="40" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  
+  <!-- Glowing Cyber Visor -->
+  <g filter="url(#avatar-shadow)">
+    <rect x="135" y="145" width="130" height="36" rx="8" fill="#042f2e" stroke="#2dd4bf" stroke-width="2.5"/>
+    <line x1="145" y1="163" x2="255" y2="163" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="200" cy="163" r="4" fill="#f0fdfa"/>
+  </g>
+
+  <!-- Code / Terminal Tag in Corner -->
+  <rect x="25" y="25" width="110" height="26" rx="6" fill="#042f2e" stroke="#14b8a6" stroke-width="1"/>
+  <text x="80" y="42" font-family="monospace" font-size="11" font-weight="bold" fill="#2dd4bf" text-anchor="middle">&lt;J0571N /&gt;</text>
+
+  <!-- Status indicator -->
+  <circle cx="360" cy="35" r="5" fill="#10b981"/>
+  <circle cx="360" cy="35" r="10" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.6"/>
+</svg>

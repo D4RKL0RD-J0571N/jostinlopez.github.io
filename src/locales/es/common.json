@@ -3,55 +3,70 @@
         "about": "Sobre Mí",
         "projects": "Proyectos",
         "expertise": "Expertise",
-        "creative": "Creativo",
+        "creative": "Showcase Técnico",
         "contact": "Contacto",
         "editMode": "Modo Edición",
         "privacy": "Política de Privacidad",
         "terms": "Términos de Servicio"
     },
     "hero": {
-        "name": "Jostin López",
+        "name": "Jostin López (J0571N)",
         "titles": [
-            "Ingeniero de Software",
-            "Ingeniero de IA",
-            "Desarrollador de Sistemas"
+            "Arquitecto de Sistemas & Videojuegos",
+            "Automatización de Operaciones & Backend",
+            "Ingeniero Full-Stack Web"
         ],
-        "subtitle": "Creo herramientas, sistemas y experiencias interactivas que conectan el software con la intención humana.",
-        "ctaPrimary": "Ver Proyectos",
+        "subtitle": "Diseño y construyo motores de automatización empresarial, arquitecturas modulares desacopladas en C#/Unity y aplicaciones web de alto rendimiento orientadas a datos.",
+        "ctaPrimary": "Explorar Proyectos",
         "ctaSecondary": "Descargar Currículum",
         "scroll": "Desplazarse"
     },
     "about": {
         "heading": "Sobre Mí",
-        "content": "Soy un desarrollador autodidacta apasionado por la ingeniería de sistemas que combinan creatividad y lógica. Mi trabajo abarca desde el desarrollo backend, la integración de IA y sistemas de juegos, hasta la construcción de orquestadores para flujos de trabajo basados en LLM y el diseño de arquitecturas modulares en Unity. Disfruto desafiando los límites técnicos, creando herramientas que se sientan vivas y comprendiendo cómo los humanos interactúan con la tecnología.",
+        "content": "Soy un ingeniero de software y arquitecto de sistemas enfocado en la construcción de soluciones técnicas robustas, modulares y de alto impacto. Mi experiencia abarca el desarrollo de motores de conciliación y auditoría logística para operaciones empresariales complejas (ReconcileAI), la orquestación de modelos de IA con guardrails deterministas y supervisión humana (HITL), y el diseño de arquitecturas de videojuegos desacopladas (Pure C# Domain, Service Locator, Event Bus y herramientas de editor en Unity 6). Priorizo el diseño guiado por especificaciones (SDD), el código testeable y la observabilidad operativa.",
         "skills": {
-            "engineering": "Ingeniería Creativa",
-            "ai": "IA Generativa",
-            "games": "Sistemas de Juego",
-            "systems": "Sistemas Escalables"
+            "engineering": "Arquitectura de Software",
+            "ai": "Operaciones & IA Backend",
+            "games": "Sistemas de Videojuegos",
+            "systems": "Desarrollo Web Moderno"
+        },
+        "techDetails": {
+            "engineering": "Clean Arch, SDD, Patrones IoC",
+            "ai": "Python, FastAPI, Streamlit, Local LLMs",
+            "games": "C#, Unity 6, HLSL, ScriptableObjects",
+            "systems": "React 19, TypeScript, Next.js, Tailwind"
         },
         "systemStatus": {
             "online": "Sistema_En_Línea",
-            "ready": "Listo para Desplegar"
+            "ready": "Listo para Producción"
         }
     },
     "projects": {
         "featured": "Proyectos Destacados",
         "index": "Índice de Proyectos",
+        "categories": {
+            "all": "Todos los Proyectos",
+            "operations": "Operaciones & Backend",
+            "games": "Sistemas & Videojuegos",
+            "web": "Web & Herramientas"
+        },
         "viewCode": "Ver Código",
         "details": "Detalles",
+        "metrics": "Impacto y Métricas Técnicas",
         "modal": {
             "close": "Cerrar",
-            "techStack": "Stack Tecnológico"
+            "techStack": "Stack Tecnológico",
+            "liveDemo": "Ver Demo en Vivo"
         }
     },
-    "gallery": {
-        "title": "Galería Creativa",
-        "disclaimer": "Obras visuales y experimentos. Se poblará con activos reales."
+    "timeline": { "title": "Hitos de Ingeniería y Arquitectura" }, "gallery": {
+        "title": "Showcase Técnico & Arquitectura",
+        "subtitle": "Diagramas de flujo, arquitecturas de sistemas e ingeniería de motores interactivos.",
+        "disclaimer": "Muestra técnica de sistemas construidos con C#, Python, React y Unity."
     },
     "contact": {
         "heading": "Ponte en Contacto",
-        "message": "Ya sea que estés trabajando en algo técnico, creativo o experimental, siempre estoy abierto a conectar y colaborar. La mejor manera de contactarme es por correo electrónico o LinkedIn.",
+        "message": "Abierto a roles de ingeniería de alto impacto, consultoría de arquitectura o proyectos complejos en videojuegos, backend y automatización. Contáctame directamente por correo o LinkedIn.",
         "emailLabel": "Envíame un correo",
         "emailAction": "Clic para copiar correo",
         "resumeLabel": "Currículum",
@@ -64,10 +79,11 @@
         }
     },
     "footer": {
-        "text": "Jostin Lopez. Construido con React, Tailwind y Framer Motion."
+        "text": "Jostin López. Diseñado con React 19, TailwindCSS y Framer Motion."
     },
     "legal": {
-        "privacy": "Política de Privacidad\n\n1. Resumen\nEste sitio web de portafolio no recopila datos personales, no utiliza cookies de rastreo y no comparte información con terceros. Cualquier información enviada a través del formulario de contacto se utiliza únicamente para fines de comunicación.\n\n2. Enlaces Externos\nEste sitio contiene enlaces a plataformas externas (GitHub, LinkedIn). No nos hacemos responsables de las prácticas de privacidad de esos sitios.",
-        "terms": "Términos de Servicio\n\n1. Uso de Contenido\nTodo el contenido original, incluyendo fragmentos de código, diseños y arte, es propiedad intelectual de Jostin Lopez a menos que se indique lo contrario. Los proyectos enlazados pueden tener sus propias licencias específicas (por ejemplo, MIT, GPL).\n\n2. Descargo de Responsabilidad\nEl contenido proporcionado en este portafolio es para mostrar trabajo profesional y experimentos. Se proporciona 'tal cual' sin garantía de ningún tipo."
+        "privacy": "Política de Privacidad\n\n1. Resumen\nEste sitio web de portafolio no recopila datos personales, no utiliza cookies de rastreo y no comparte información con terceros. Cualquier información enviada a través del formulario de contacto se utiliza únicamente para fines de comunicación profesional.\n\n2. Enlaces Externos\nEste sitio contiene enlaces a plataformas externas (GitHub, LinkedIn). No nos hacemos responsables de las prácticas de privacidad de esos sitios.",
+        "terms": "Términos de Servicio\n\n1. Uso de Contenido\nTodo el contenido original, incluyendo especificaciones, código fuente y arquitecturas, es propiedad de Jostin López a menos que se indique lo contrario.\n\n2. Descargo de Responsabilidad\nEl contenido proporcionado en este portafolio exhibe trabajo profesional, prototipos y proyectos de ingeniería para evaluación técnica."
     }
 }
+

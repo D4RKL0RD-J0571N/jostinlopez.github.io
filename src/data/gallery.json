@@ -1,38 +1,56 @@
 [
-    {
-        "id": 1,
-        "title": "Generative Synthesis",
-        "type": "AI Art",
-        "color": "opacity-10 bg-accent"
-    },
-    {
-        "id": 2,
-        "title": "Cyberpunk Character",
-        "type": "Illustration",
-        "color": "opacity-10 bg-accent"
-    },
-    {
-        "id": 3,
-        "title": "Apparel Design 01",
-        "type": "Print",
-        "color": "opacity-10 bg-accent"
-    },
-    {
-        "id": 4,
-        "title": "Modular Environment",
-        "type": "3D",
-        "color": "opacity-10 bg-accent"
-    },
-    {
-        "id": 5,
-        "title": "Neural Style",
-        "type": "Experiment",
-        "color": "opacity-10 bg-accent"
-    },
-    {
-        "id": 6,
-        "title": "Game UI Mockup",
-        "type": "UI/UX",
-        "color": "opacity-10 bg-accent"
-    }
+  {
+    "id": "showcase-reconcile",
+    "title": "ReconcileAI — 3-Way Reconciliation Pipeline",
+    "type": "Operations",
+    "image": "/assets/reconcile-ai-banner.svg",
+    "summary": "Heuristic grouping engine matching Parent Prepacks (PRK) to dock Child SKUs (UN) with self-healing Excel VBA recovery.",
+    "metrics": "100% Zero-Error Curve Validation · 10s Macro Paste Strip · Standalone Portable",
+    "stack": ["Python", "Streamlit", "OpenPyXL", "Heuristics"]
+  },
+  {
+    "id": "showcase-crm",
+    "title": "Enterprise AI CRM — Human-in-the-Loop Protocol",
+    "type": "AI Systems",
+    "image": "/assets/crm-orchestrator-banner.svg",
+    "summary": "FastAPI gateway with deterministic guardrails and WebSocket negotiation routing low-confidence intents to human operator review.",
+    "metrics": "Deterministic Pre-Scan · Sub-100ms Routing · Full Observability",
+    "stack": ["Python", "FastAPI", "WebSockets", "Redis", "Prometheus"]
+  },
+  {
+    "id": "showcase-unity",
+    "title": "Unity Modular Core — Pure C# Domain Architecture",
+    "type": "Game Dev",
+    "image": "/assets/unity-architecture-banner.svg",
+    "summary": "Spec-Driven Development architecture isolating pure domain logic from UnityEngine dependencies for fast, decoupled NUnit testing.",
+    "metrics": "Zero Singletons · Service Locator · Event Bus · ScriptableObjects",
+    "stack": ["C#", "Unity 6", "NUnit", "SpecKit SDD", "Editor Tools"]
+  },
+  {
+    "id": "showcase-elms",
+    "title": "ELMS — Procedural Maze & HLSL Sonar Shaders",
+    "type": "Game Dev",
+    "image": "/assets/elms-banner.svg",
+    "summary": "Real-time acoustic exploration system combining procedural maze generation with custom HLSL distance-field wave shaders.",
+    "metrics": "Real-Time Distance Fields · Decoupled Procedural Logic · Zero GC Spikes",
+    "stack": ["C#", "Unity", "HLSL", "ShaderLab", "Procedural"]
+  },
+  {
+    "id": "showcase-nebula",
+    "title": "NebulaView — Resilient Multi-Provider Discovery",
+    "type": "Web Systems",
+    "image": "/assets/nebula-view-banner.svg",
+    "summary": "Full-stack media engine featuring dynamic provider failover, TMDB meta-enrichment, Redis edge caching, and bilingual UX.",
+    "metrics": "Zero-Downtime Failover · Sub-second Latency · Supabase Persistence",
+    "stack": ["TypeScript", "Next.js", "Redis", "Supabase", "TailwindCSS"]
+  },
+  {
+    "id": "showcase-avatar",
+    "title": "J0571N Cybernetics — Digital Identity & System Badging",
+    "type": "Web Systems",
+    "image": "/assets/avatar-jostin.svg",
+    "summary": "Custom scalable vector telemetry identity badge designed for dark-mode high-contrast engineering branding.",
+    "metrics": "Vector SVG · Zero Network Dependencies · Pure CSS Glow",
+    "stack": ["SVG", "Design Systems", "UI Architecture"]
+  }
 ]

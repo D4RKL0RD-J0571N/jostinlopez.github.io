@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { projectSchema, completeConfigSchema } from './validation';
+import { projectSchema, completeConfigSchema, projectsArraySchema } from './validation';
+import actualProjects from '../data/projects.json';
 
 describe('Validation Schemas', () => {
     it('should validate a valid project', () => {
@@ -28,15 +29,23 @@ describe('Validation Schemas', () => {
         expect(result.success).toBe(false);
     });
 
+    it('should validate all projects in src/data/projects.json', () => {
+        const result = projectsArraySchema.safeParse(actualProjects);
+        if (!result.success) {
+            console.error(result.error);
+        }
+        expect(result.success).toBe(true);
+    });
+
     it('should validate complete config', () => {
         const validConfig = {
-            projects: [],
+            projects: actualProjects,
             timeline: [],
             gallery: [],
             globalSettings: {
-                accentColor: '#ffffff',
+                accentColor: '#14b8a6',
                 fontHeading: 'Inter',
-                fontBody: 'Roboto',
+                fontBody: 'Inter',
                 formEndpoint: ''
             },
             sectionOrder: ['hero', 'projects']

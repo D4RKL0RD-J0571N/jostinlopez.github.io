@@ -1,73 +1,89 @@
 {
     "nav": {
-        "about": "About",
+        "about": "About Me",
         "projects": "Projects",
         "expertise": "Expertise",
-        "creative": "Creative",
+        "creative": "Technical Showcase",
         "contact": "Contact",
         "editMode": "Edit Mode",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service"
     },
     "hero": {
-        "name": "Jostin López",
+        "name": "Jostin López (J0571N)",
         "titles": [
-            "Software Engineer",
-            "AI Engineer",
-            "Systems Developer"
+            "Systems & Game Architect",
+            "Backend & Operations Automation",
+            "Full-Stack Web Engineer"
         ],
-        "subtitle": "I create tools, systems, and interactive experiences that connect software with human intent.",
-        "ctaPrimary": "View Projects",
+        "subtitle": "Engineering enterprise operations automation engines, decoupled modular architectures in C#/Unity, and high-performance data-driven web applications.",
+        "ctaPrimary": "Explore Projects",
         "ctaSecondary": "Download Resume",
-        "scroll": "Scroll Down"
+        "scroll": "Scroll"
     },
     "about": {
         "heading": "About Me",
-        "content": "I'm a self-taught developer passionate about engineering systems that blend creativity and logic. My work spans backend development, AI integration, and game systems — from building orchestrators for LLM-driven workflows to designing modular Unity architectures. I enjoy pushing technical boundaries, crafting tools that feel alive, and understanding how humans interact with technology.",
+        "content": "I am a software engineer and systems architect focused on building robust, modular, and high-impact technical solutions. My experience spans building 3-way supply chain reconciliation & audit copilot engines for complex enterprise operations (ReconcileAI), orchestrating AI agent pipelines with deterministic guardrails and Human-in-the-Loop oversight, and designing decoupled game architectures (Pure C# Domain, Service Locator, Event Bus, and custom editor tooling in Unity 6). I prioritize Spec-Driven Development (SDD), isolated unit testing, and operational observability.",
         "skills": {
-            "engineering": "Creative Engineering",
-            "ai": "Generative AI",
+            "engineering": "Software Architecture",
+            "ai": "Operations & AI Backend",
             "games": "Game Systems",
-            "systems": "Scalable Systems"
+            "systems": "Modern Web Systems"
+        },
+        "techDetails": {
+            "engineering": "Clean Arch, SDD, IoC Patterns",
+            "ai": "Python, FastAPI, Streamlit, Local LLMs",
+            "games": "C#, Unity 6, HLSL, ScriptableObjects",
+            "systems": "React 19, TypeScript, Next.js, Tailwind"
         },
         "systemStatus": {
             "online": "System_Online",
-            "ready": "Ready to Deploy"
+            "ready": "Ready for Production"
         }
     },
     "projects": {
         "featured": "Featured Projects",
         "index": "Project Index",
+        "categories": {
+            "all": "All Projects",
+            "operations": "Operations & Backend",
+            "games": "Systems & Game Dev",
+            "web": "Web & Tools"
+        },
         "viewCode": "View Code",
         "details": "Details",
+        "metrics": "Key Technical Impact",
         "modal": {
             "close": "Close",
-            "techStack": "Key Tech Stack"
+            "techStack": "Tech Stack",
+            "liveDemo": "Live Demo"
         }
     },
-    "gallery": {
-        "title": "Creative Gallery",
-        "disclaimer": "Visual works & experiments. To be populated with real assets."
+    "timeline": { "title": "Engineering & Architecture Milestones" }, "gallery": {
+        "title": "Technical Showcase & Architecture",
+        "subtitle": "Dataflows, system blueprints, and engine mechanics in action.",
+        "disclaimer": "Technical showcase of production architectures built with C#, Python, React, and Unity."
     },
     "contact": {
-        "heading": "Get In Touch",
-        "message": "Whether you’re working on something technical, creative, or experimental — I’m always open to connect and collaborate. The best way to reach me is by email or LinkedIn.",
-        "emailLabel": "Email Me",
+        "heading": "Get in Touch",
+        "message": "Open to high-impact engineering roles, architecture consulting, or complex projects across game development, backend automation, and data pipelines. Connect directly via email or LinkedIn.",
+        "emailLabel": "Send an email",
         "emailAction": "Click to copy email",
         "resumeLabel": "Resume",
         "resumeAction": "Download PDF Version",
         "form": {
             "name": "Name",
-            "email": "Email",
+            "email": "Email Address",
             "message": "Message",
             "send": "Send Message"
         }
     },
     "footer": {
-        "text": "Jostin Lopez. Built with React, Tailwind & Framer Motion."
+        "text": "Jostin López. Built with React 19, TailwindCSS, and Framer Motion."
     },
     "legal": {
-        "privacy": "Privacy Policy\n\n1. Overview\nThis portfolio website does not collect any personal data, does not use cookies for tracking, and does not share information with third parties. Any information submitted via the contact form is used solely for communication purposes.\n\n2. External Links\nThis site contains links to external platforms (GitHub, LinkedIn). We are not responsible for the privacy practices of those sites.",
-        "terms": "Terms of Service\n\n1. Content Usage\nAll original content, including code snippets, designs, and artwork, is the intellectual property of Jostin Lopez unless otherwise stated. Projects linked may have their own specific licenses (e.g., MIT, GPL).\n\n2. Disclaimer\nThe content provided on this portfolio is for showcasing professional work and experiments. It is provided 'as is' without warranty of any kind."
+        "privacy": "Privacy Policy\n\n1. Overview\nThis portfolio website does not collect personal data, track user analytics, or share data with third parties. Any inquiry submitted through the contact form is used solely for direct professional communication.\n\n2. External Links\nThis site links to external platforms (GitHub, LinkedIn). We are not responsible for the privacy policies of third-party platforms.",
+        "terms": "Terms of Service\n\n1. Intellectual Property\nAll original technical designs, architectures, and source code are the intellectual property of Jostin López unless otherwise specified.\n\n2. Disclaimer\nContent displayed in this portfolio serves as technical documentation, engineering prototypes, and professional work."
     }
 }
+

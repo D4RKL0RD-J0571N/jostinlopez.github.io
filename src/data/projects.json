@@ -1,35 +1,50 @@
 [
   {
-    "id": "nebula-view",
+    "id": "reconcile-ai",
     "featured": true,
-    "title": "NebulaView - A Provider-First Content Discovery",
-    "category": "Full Stack",
-    "thumbnail": "https://github.com/D4RKL0RD-J0571N/nebula-view/blob/main/public/logo.jpg",
-    "description": "A visually dynamic, bilingual (EN / ES-419) media discovery web application powered by TMDB. Explore movies, TV shows, and anime with an immersive, reactive interface.",
-    "long_description": "NebulaView - A Provider-First Content Discovery System using Consumet extensions for meta enrichment and multi-provider streaming. Discover movies, TV shows, and anime with intelligent provider fallback, automated skill-based reviews, and comprehensive governance.",
+    "title": "ReconcileAI — 3-Way Supply Chain Inventory Auditor & Copilot",
+    "category": "Operations & Backend",
+    "thumbnail": "/assets/reconcile-ai-banner.svg",
+    "description": "Enterprise-grade 3-Way reconciliation engine eliminating manual discrepancies between ERP Purchase Orders (PO 43), Commercial Customs Invoices (Ped 41), and Physical Dock QC counts.",
+    "long_description": "ReconcileAI is a production-grade operations automation engine and audit copilot. It resolves the classic multi-tier supply chain mismatch between Parent Prepacks (PRK) and Child SKUs (UN) using deterministic heuristic curve verification (100% zero-error curve validation). Features include self-healing spreadsheet recovery for damaged official Excel models, fast-paste dual TSV strips (Cols AS:AZ) allowing operators to square official corporate closures in under 10 seconds, and 1-click generation of fully squared .xlsm workbooks with intact corporate VBA macros. Packaged as a 100% standalone portable distribution requiring zero Python runtime or administrative rights.",
+    "metrics": [
+      "100% Zero-Error Curve Validation",
+      "10-Second Macro Sync Strip",
+      "Zero-Installation Portable Distro",
+      "Self-Healing Excel VBA"
+    ],
     "tags": [
-      "TypeScript",
-      "Next.js",
-      "Supabase",
-      "Redis"
+      "Python",
+      "Streamlit",
+      "OpenPyXL",
+      "Heuristic Algorithms",
+      "Supply Chain",
+      "ERP / SAP"
     ],
     "links": {
-      "repo": "https://github.com/D4RKL0RD-J0571N/nebula-view",
-      "demo": "https://nebula-view.vercel.app/"
+      "repo": "https://github.com/D4RKL0RD-J0571N/3-Way-Inventory-Reconciliation",
+      "demo": "https://github.com/D4RKL0RD-J0571N/3-Way-Inventory-Reconciliation"
     }
   },
   {
     "id": "crm-orchestrator",
-    "title": "Enterprise AI CRM — Human-in-the-Loop Orchestrator",
-    "category": "AI",
     "featured": true,
-    "thumbnail": "https://imgur.com/DGzM0aG.png",
-    "description": "Compliance-first AI orchestration framework for regulated businesses — combining automation, human oversight, and observability.",
-    "long_description": "Designed and built a production-grade AI orchestration framework integrating Local LLMs with WhatsApp for secure, auditable, and human-supervised customer communication. Implements deterministic safety guardrails, real-time Human-in-the-Loop workflows, and dynamic intent routing to maintain full operational control over AI-generated content. Powered by FastAPI, React, and WebSockets with detailed observability through Prometheus metrics, hybrid runtime configuration, and white-label theming for enterprise deployment.",
+    "title": "Enterprise AI CRM — Human-in-the-Loop Orchestrator",
+    "category": "Operations & Backend",
+    "thumbnail": "/assets/crm-orchestrator-banner.svg",
+    "description": "Compliance-first AI orchestration framework combining local LLM inference, deterministic safety guardrails, and real-time Human-in-the-Loop oversight.",
+    "long_description": "Designed and built an enterprise-grade AI orchestration framework integrating Local LLMs with WhatsApp for auditable, human-supervised customer communication in regulated sectors. Employs deterministic regex and policy guardrails, dynamic intent routing, real-time WebSocket negotiation for operator approval queues, and complete observability via Prometheus metrics. Decoupled architecture with FastAPI backend and high-performance React dashboard.",
+    "metrics": [
+      "Deterministic Pre-Scan Guardrails",
+      "Sub-100ms Intent Routing",
+      "Prometheus Telemetry",
+      "Full Audit Logging"
+    ],
     "tags": [
       "Python",
       "FastAPI",
-      "LLM",
+      "WebSockets",
+      "Local LLMs",
       "Redis",
       "Docker"
     ],
@@ -39,56 +54,26 @@
     }
   },
   {
-    "id": "local-ai-framework",
-    "title": "Local AI Companion Framework",
-    "category": "AI",
+    "id": "unity-sdd-framework",
     "featured": true,
-    "thumbnail": "https://imgur.com/si8FdWo.png",
-    "description": "Privacy-first framework for building personal AI assistants that run locally without cloud dependency.",
-    "long_description": "Developed a modular, offline AI companion framework with contextual memory and persona persistence. Implements a local-first data policy ensuring full privacy and no cloud communication. The system provides dialogue flow management, persona modeling, and quantized model support for consumer GPUs. Designed for desktop environments using C# for interface logic and Python for model inference orchestration.",
-    "tags": [
-      "Python",
-      "PyTorch",
-      "Local LLM",
-      "Electron"
+    "title": "Unity Modular Core — Spec-Driven Game Architecture",
+    "category": "Game Systems & Architecture",
+    "thumbnail": "/assets/unity-architecture-banner.svg",
+    "description": "Constitutional Spec-Driven Development (SDD) game engine blueprint synthesizing lessons from 14 projects into pure C# domain decoupling, Service Locator, and ScriptableObject data flow.",
+    "long_description": "A comprehensive game systems blueprint based on the SpecKit Spec-Driven Development methodology. Enforces strict constitutional articles: Pure C# Domain Layer with zero Unity engine dependencies for isolated unit testing, Service Locator / Inversion of Control pattern to ban manager singletons, and type-safe Event Bus communication. Bridges seamlessly into Unity 6 URP infrastructure, ScriptableObject registries, and custom editor tooling for rapid game designer iteration.",
+    "metrics": [
+      "Zero-Dependency Pure C# Domain",
+      "100% Isolated NUnit Testable",
+      "Zero Singleton Architecture",
+      "Designer ScriptableObject Registries"
     ],
-    "links": {
-      "repo": "https://github.com/D4RKL0RD-J0571N/local-ai-companion",
-      "demo": "https://github.com/D4RKL0RD-J0571N/local-ai-companion"
-    }
-  },
-  {
-    "id": "resourcemanager",
-    "title": "ResourceManager — TypeScript Backend Toolkit",
-    "category": "Web",
-    "featured": true,
-    "thumbnail": "https://imgur.com/R8QdckG.png",
-    "description": "Modular TypeScript backend toolkit for scalable resource management — focused on clean service architecture and maintainable design.",
-    "long_description": "ResourceManager is a TypeScript-first backend toolkit for structured resource management—built solo to explore robust, maintainable architectures for web APIs and services. Demonstrates clean design, reusability, and modular implementations of typical backend patterns: CRUD logic, role/permission layers, request handling, and data validation. Built to refine my understanding of scalable codebases and system modularity, especially relevant to modern SaaS and cloud APIs.",
     "tags": [
-      "TypeScript",
-      "JavaScript",
-      "CSS",
-      "Node.js"
-    ],
-    "links": {
-      "repo": "https://github.com/D4RKL0RD-J0571N/resourcemanager",
-      "demo": "https://github.com/D4RKL0RD-J0571N/resourcemanager"
-    }
-  },
-  {
-    "id": "3d-learning",
-    "title": "3D Learning Prototype — Modular Game Architecture & Persistence",
-    "category": "Game Systems",
-    "featured": true,
-    "thumbnail": "assets/project-placeholder.png",
-    "description": "Interactive 3D prototype exploring modular game systems for learning, progression, and data persistence.",
-    "long_description": "Designed and built a Unity-based 3D prototype demonstrating scalable system architecture for learning mechanics and player progression. Implements an Entity–Attribute–Progression (EAP) framework using Inversion of Control principles. Includes runtime serialization, modular data-driven saving/loading, and flexible component registration to support expandable gameplay systems.",
-    "tags": [
-      "Unity",
       "C#",
+      "Unity 6",
+      "Spec-Driven Development",
       "ScriptableObjects",
-      "Modular Architecture"
+      "Software Architecture",
+      "Editor Tooling"
     ],
     "links": {
       "repo": "https://github.com/D4RKL0RD-J0571N/3D-Learning-Prototype",
@@ -97,17 +82,23 @@
   },
   {
     "id": "elms",
-    "title": "Echo-Location Maze System (ELMS)",
-    "category": "Game Systems",
     "featured": true,
-    "thumbnail": "assets/project-placeholder.png",
-    "description": "Unity prototype focused on procedural generation, system decoupling, and designer-centric tooling.",
-    "long_description": "ELMS is a self-contained demonstration of procedural logic, decoupled architecture, and runtime adaptability in Unity. Each mechanic is written to be extendable, designer-friendly, and data-driven—embodying a systems-first approach to gameplay. Features echo-based reveal mechanics and flexible editor tooling for rapid iteration.",
+    "title": "ELMS — Echo-Location Maze System & Sonar Shaders",
+    "category": "Game Systems & Architecture",
+    "thumbnail": "/assets/elms-banner.svg",
+    "description": "Procedural maze generation and real-time echo-location mechanics powered by custom HLSL/ShaderLab wavefront shaders and decoupled event mechanics.",
+    "long_description": "ELMS is a real-time exploration demonstration combining procedural generation with an acoustic visibility mechanic. Developed with decoupled systems and designer-centric tooling. Features a custom HLSL wavefront shader calculating real-time distance fields to reveal unseen labyrinth geometry as sound pulses propagate, alongside runtime seed management and modular player controllers.",
+    "metrics": [
+      "Real-Time HLSL Wavefront Shader",
+      "Decoupled Procedural Generation",
+      "Zero-Allocation Audio Triggers"
+    ],
     "tags": [
       "C#",
-      "ShaderLab",
       "Unity",
-      "HLSL"
+      "HLSL",
+      "ShaderLab",
+      "Procedural Generation"
     ],
     "links": {
       "repo": "https://github.com/D4RKL0RD-J0571N/MazePrototype",
@@ -115,17 +106,98 @@
     }
   },
   {
-    "id": "rpgmz-video",
-    "title": "Custom HTML5 Video Playback Plugin (RPG Maker MZ)",
-    "category": "Tools",
+    "id": "nebula-view",
+    "featured": true,
+    "title": "NebulaView — Provider-First Content Discovery System",
+    "category": "Web Architecture & Tools",
+    "thumbnail": "/assets/nebula-view-banner.svg",
+    "description": "Bilingual (EN / ES-419) media discovery web application with resilient multi-provider streaming fallbacks, TMDB meta-enrichment, and Next.js / Supabase.",
+    "long_description": "NebulaView is a provider-first entertainment platform built on Next.js 14 and TypeScript. Solves API instability and geo-blocking by implementing Consumet extensions with automated provider fallback. Features dynamic TMDB metadata ingestion, Redis edge caching for sub-second responses, Supabase user persistence, and fluid Framer Motion micro-interactions.",
+    "metrics": [
+      "Zero-Downtime Provider Failover",
+      "Bilingual i18n Localization",
+      "Sub-second Edge Ingestion"
+    ],
+    "tags": [
+      "TypeScript",
+      "Next.js",
+      "Supabase",
+      "Redis",
+      "TailwindCSS",
+      "Vercel"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N/nebula-view",
+      "demo": "https://nebula-view.vercel.app/"
+    }
+  },
+  {
+    "id": "resourcemanager",
     "featured": false,
-    "thumbnail": "assets/project-placeholder.png",
-    "description": "Extended RPG Maker MZ video playback system for cinematic control and interactive storytelling.",
-    "long_description": "Developed a JavaScript plugin expanding RPG Maker MZ's video engine for dynamic playback and player interaction. Features playback speed control, looping, fade transitions, and contextual skip logic integrated directly into the engine's interpreter. Enhances narrative flexibility and user engagement for cinematic gameplay experiences.",
+    "title": "ResourceManager — Clean Service Architecture Toolkit",
+    "category": "Web Architecture & Tools",
+    "thumbnail": "/assets/project-placeholder.svg",
+    "description": "Modular TypeScript backend toolkit demonstrating clean service architecture, CRUD lifecycle, permission layers, and strict data validation.",
+    "long_description": "A TypeScript-first backend toolkit designed to test robust patterns for modern SaaS services and web APIs. Features clean service boundaries, declarative permission models, schema-based request validation, and zero-coupling data access layers.",
+    "metrics": [
+      "Zero-Coupling Service Boundaries",
+      "Declarative RBAC",
+      "Strict Schema Contracts"
+    ],
+    "tags": [
+      "TypeScript",
+      "Node.js",
+      "Clean Architecture",
+      "REST API"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N/resourcemanager",
+      "demo": "https://github.com/D4RKL0RD-J0571N/resourcemanager"
+    }
+  },
+  {
+    "id": "local-ai-framework",
+    "featured": false,
+    "title": "Local AI Companion — Quantized Offline Assistant Framework",
+    "category": "Operations & Backend",
+    "thumbnail": "/assets/project-placeholder.svg",
+    "description": "Privacy-first modular framework running quantized local LLMs with contextual episodic memory and persona persistence.",
+    "long_description": "An offline-first AI framework designed for zero-cloud environments. Manages local model inference orchestration via Python and PyTorch with 4-bit/8-bit quantization for consumer hardware. Includes long-term conversational memory graphs and desktop integration logic.",
+    "metrics": [
+      "100% Offline Local Inference",
+      "4-bit Quantization on Consumer GPUs",
+      "Episodic Memory Graph"
+    ],
+    "tags": [
+      "Python",
+      "PyTorch",
+      "Local LLMs",
+      "Quantization",
+      "Vector Memory"
+    ],
+    "links": {
+      "repo": "https://github.com/D4RKL0RD-J0571N/local-ai-companion",
+      "demo": "https://github.com/D4RKL0RD-J0571N/local-ai-companion"
+    }
+  },
+  {
+    "id": "rpgmz-video",
+    "featured": false,
+    "title": "Custom HTML5 Video & Cinematic Controller (RPG Maker MZ)",
+    "category": "Game Systems & Architecture",
+    "thumbnail": "/assets/project-placeholder.svg",
+    "description": "Engine plugin expanding video playback for dynamic alpha layering, loop points, and interpreter-integrated interactive skips.",
+    "long_description": "Developed a JavaScript plugin directly hooking into RPG Maker MZ's core interpreter to grant fine-grained cinematic control. Enables alpha-channel video blending, variable playback speeds, seamless looping, and conditional interactive event branching.",
+    "metrics": [
+      "Direct Interpreter Hooking",
+      "Hardware-Accelerated Alpha Blending",
+      "Zero-Lag Loop Points"
+    ],
     "tags": [
       "JavaScript",
-      "RPG Maker",
-      "Plugin"
+      "RPG Maker MZ",
+      "Plugin Development",
+      "Game Tools"
     ],
     "links": {
       "repo": "https://github.com/D4RKL0RD-J0571N/RPGMZ-plugins"

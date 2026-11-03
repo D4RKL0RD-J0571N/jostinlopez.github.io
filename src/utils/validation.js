@@ -7,9 +7,15 @@ export const projectSchema = z.object({
     featured: z.boolean(),
     tags: z.string().or(z.array(z.string())), // Allow legacy string format but prefer array
     description: z.string(),
-    repo: z.string().url().optional().or(z.literal('')),
-    demo: z.string().url().optional().or(z.literal('')),
-    thumbnail: z.string().url().optional().or(z.literal(''))
+    long_description: z.string().optional(),
+    metrics: z.array(z.string()).optional(),
+    repo: z.string().optional().or(z.literal('')),
+    demo: z.string().optional().or(z.literal('')),
+    links: z.object({
+        repo: z.string().optional(),
+        demo: z.string().optional()
+    }).optional(),
+    thumbnail: z.string().optional().or(z.literal(''))
 });
 
 export const projectsArraySchema = z.array(projectSchema);
@@ -27,17 +33,26 @@ export const settingsSchema = z.object({
 
 export const gallerySchema = z.array(z.object({
     id: z.number().or(z.string()),
-    url: z.string().url(),
+    url: z.string().optional(),
+    image: z.string().optional(),
     title: z.string(),
-    category: z.string().optional()
+    type: z.string().optional(),
+    category: z.string().optional(),
+    color: z.string().optional(),
+    summary: z.string().optional(),
+    metrics: z.string().optional(),
+    stack: z.array(z.string()).optional()
 }));
 
 export const timelineSchema = z.array(z.object({
     id: z.number().or(z.string()),
-    year: z.string(),
-    role: z.string(),
-    company: z.string(),
+    period: z.string().optional(),
+    year: z.string().optional(),
+    title: z.string().optional(),
+    role: z.string().optional(),
+    company: z.string().optional(),
     description: z.string(),
+    isCurrent: z.boolean().optional(),
     tags: z.array(z.string()).optional()
 }));
 

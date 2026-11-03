@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-nv" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090514"/>
+      <stop offset="50%" stop-color="#140a2b"/>
+      <stop offset="100%" stop-color="#2a0845"/>
+    </linearGradient>
+    <linearGradient id="card-nv" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#211142" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#130829" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="shadow-nv" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg-grad-nv)"/>
+
+  <!-- Cyber grid -->
+  <g stroke="#7c3aed" stroke-opacity="0.2" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="50" y="35" width="290" height="32" rx="6" fill="#4c1d95" fill-opacity="0.6" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="65" y="56" font-family="monospace" font-size="13" font-weight="bold" fill="#c4b5fd" letter-spacing="1.5">FULL-STACK MEDIA DISCOVERY</text>
+
+  <text x="50" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#f8fafc">NebulaView</text>
+  <text x="50" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#c084fc">Provider-First Media Engine, Consumet Meta Enrichment &amp; Bilingual UX</text>
+
+  <!-- Features Grid -->
+  <g filter="url(#shadow-nv)">
+    <rect x="50" y="190" width="215" height="170" rx="12" fill="url(#card-nv)" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="70" y="225" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f472b6">Provider Fallback</text>
+    <text x="70" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Multi-Source Streaming</text>
+    <text x="70" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Smart Failover Logic</text>
+    <text x="70" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Zero Playback Interruption</text>
+    <text x="70" y="335" font-family="monospace" font-size="11" fill="#f472b6">Consumet Protocol</text>
+  </g>
+
+  <g filter="url(#shadow-nv)">
+    <rect x="290" y="190" width="215" height="170" rx="12" fill="url(#card-nv)" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="310" y="225" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#c084fc">Meta Enrichment</text>
+    <text x="310" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• TMDB Dynamic Ingestion</text>
+    <text x="310" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Redis Caching Layer</text>
+    <text x="310" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Bilingual (EN / ES-419)</text>
+    <text x="310" y="335" font-family="monospace" font-size="11" fill="#c084fc">Sub-second Latency</text>
+  </g>
+
+  <g filter="url(#shadow-nv)">
+    <rect x="530" y="190" width="220" height="170" rx="12" fill="url(#card-nv)" stroke="#06b6d4" stroke-width="1.5"/>
+    <text x="550" y="225" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">Reactive Interface</text>
+    <text x="550" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Next.js &amp; TypeScript</text>
+    <text x="550" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Tailwind &amp; Framer Motion</text>
+    <text x="550" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Supabase Auth &amp; State</text>
+    <text x="550" y="335" font-family="monospace" font-size="11" fill="#22d3ee">Vercel Edge Ready</text>
+  </g>
+
+  <!-- Footer Ribbon -->
+  <rect x="50" y="390" width="700" height="35" rx="6" fill="#110924" stroke="#251247" stroke-width="1"/>
+  <text x="70" y="412" font-family="monospace" font-size="12" fill="#94a3b8">STACK: <tspan fill="#f472b6">TypeScript · Next.js · Supabase · Redis · TailwindCSS · Vercel</tspan></text>
+</svg>

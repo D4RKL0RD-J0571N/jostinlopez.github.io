@@ -160,3 +160,29 @@
 
 
 
+
+
+---
+
+### 2026-11-03 03:07 — PR-001 Portfolio Overhaul: Flagship Projects, Identity & Technical Showcase
+**Role:** ARCHITECT / BUILDER
+**Files changed:**
+- `specs/PORTFOLIO_REVAMP.md` (created)
+- `src/data/projects.json` (integrated ReconcileAI, updated all flagship systems with metrics)
+- `src/config/projects.schema.json` (aligned category enums with the 3 core pillars, added metrics schema)
+- `src/utils/validation.js` (updated Zod schemas for relative asset paths, metrics, and technical showcase)
+- `src/utils/validation.test.js` (added test validating all items in `projects.json`)
+- `src/components/Projects.jsx` (added specialty category tabs, engineering metrics badges, improved modal)
+- `src/components/Hero.jsx` (updated titles to reflect the 3 engineering pillars, added dynamic i18n re-keying)
+- `src/components/About.jsx` (switched to dedicated vector avatar, updated core competencies and architecture telemetry)
+- `src/components/Gallery.jsx` (transformed fake gallery into Technical Showcase with real architecture dataflows)
+- `src/data/gallery.json` (replaced placeholder items with 6 production system artifacts)
+- `src/data/timeline.json` (reframed experience as high-impact Systems Engineering milestones)
+- `src/locales/es/common.json` & `src/locales/en/common.json` (updated copy, pillar categories, and titles)
+- `src/context/ContentContext.jsx` (added migration to ensure stale localStorage syncs with fresh flagship projects)
+- `public/assets/*.svg` (generated high-resolution vector banners for ReconcileAI, Unity SDD, CRM HITL, ELMS, NebulaView, and Avatar)
+
+**What:** Complete overhaul transforming the portfolio into a top-tier technical showcase across 3 specialized pillars: Operations & Backend (featuring ReconcileAI), Game Systems & Architecture (Spec-Driven Unity Core & ELMS), and Modern Web Systems (NebulaView). Replaced all 0-byte placeholders and fake gallery items with production diagrams and real metrics.
+**Why:** The portfolio was incomplete, contained placeholders and dummy art disclaimers, and omitted Jostin's highest-value engineering achievements (ReconcileAI and deep C#/Unity architectural frameworks).
+**Trade-offs:** Replaced the art gallery concept with a Technical Systems Showcase to focus directly on selling technical architecture and software engineering authority.
+**Risks:** None. `npm run lint` exits 0, `npx vitest run` passes 10/10, and `npm run build` exits 0.

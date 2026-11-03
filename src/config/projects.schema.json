@@ -27,16 +27,30 @@
         "category": {
             "type": "string",
             "enum": [
+                "Operations & Backend",
+                "Game Systems & Architecture",
+                "Web Architecture & Tools",
                 "AI & Machine Learning",
                 "Game Development",
                 "Tools & Utilities",
                 "Creative Technology",
                 "Full Stack Development",
                 "Web Architecture",
+                "Full Stack",
+                "AI",
+                "Web",
+                "Game Systems",
+                "Tools",
                 "Other"
             ]
         },
         "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "metrics": {
             "type": "array",
             "items": {
                 "type": "string"
@@ -52,12 +66,10 @@
             "type": "object",
             "properties": {
                 "repo": {
-                    "type": "string",
-                    "format": "uri"
+                    "type": "string"
                 },
                 "demo": {
-                    "type": "string",
-                    "format": "uri"
+                    "type": "string"
                 }
             }
         }

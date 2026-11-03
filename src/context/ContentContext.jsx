@@ -29,14 +29,18 @@ export const ContentProvider = ({ children }) => {
         }
     };
 
-    // Initialize Projects State
-    const [projects, setProjects] = useState(() => safeParse('portfolio_projects', initialProjects, Array.isArray));
+    // Initialize Projects State with smart migration for newly registered projects
+    const [projects, setProjects] = useState(() => {
+        const saved = safeParse('portfolio_projects', initialProjects, Array.isArray);
+        const hasReconcile = Array.isArray(saved) && saved.some(p => p.id === 'reconcile-ai');
+        return hasReconcile ? saved : initialProjects;
+    });
 
     // Initialize Timeline State
-    const [timeline, setTimeline] = useState(() => safeParse('portfolio_timeline', initialTimeline, Array.isArray));
+    const [timeline, setTimeline] = useState(() => { const saved = safeParse('portfolio_timeline', initialTimeline, Array.isArray); return (Array.isArray(saved) && saved.some(t => t.id === 'milestone-1')) ? saved : initialTimeline; });
 
     // Initialize Gallery State
-    const [gallery, setGallery] = useState(() => safeParse('portfolio_gallery', initialGallery, Array.isArray));
+    const [gallery, setGallery] = useState(() => { const saved = safeParse('portfolio_gallery', initialGallery, Array.isArray); return (Array.isArray(saved) && saved.some(g => g.id === 'showcase-reconcile')) ? saved : initialGallery; });
 
     // Initialize Section Order
     const [sectionOrder, setSectionOrder] = useState(() => {
@@ -203,7 +207,7 @@ export const ContentProvider = ({ children }) => {
             { path: 'src/data/projects.json', content: projects },
             { path: 'src/data/timeline.json', content: timeline },
             { path: 'src/data/gallery.json', content: gallery },
-            { path: 'src/data/settings.json', content: globalSettings } // If you have settings.json
+            { path: 'src/data/settings.json', content: globalSettings }
         ];
 
         try {

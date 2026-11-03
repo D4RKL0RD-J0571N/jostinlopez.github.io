@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-crm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="50%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b263b"/>
+    </linearGradient>
+    <linearGradient id="card-crm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b2838" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#101a26" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="shadow-crm" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg-grad-crm)"/>
+
+  <!-- Background telemetry lines -->
+  <g stroke="#3b82f6" stroke-opacity="0.15" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="50" y="35" width="270" height="32" rx="6" fill="#1e3a8a" fill-opacity="0.6" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="65" y="56" font-family="monospace" font-size="13" font-weight="bold" fill="#93c5fd" letter-spacing="1.5">HUMAN-IN-THE-LOOP AI CRM</text>
+
+  <text x="50" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#f8fafc">Enterprise AI Orchestrator</text>
+  <text x="50" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#94a3b8">Deterministic Guardrails, Local LLMs, WebSocket Real-Time Review &amp; WhatsApp</text>
+
+  <!-- Flow diagram -->
+  <!-- Box 1: Ingestion & Safety -->
+  <g filter="url(#shadow-crm)">
+    <rect x="50" y="190" width="200" height="170" rx="12" fill="url(#card-crm)" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="65" y="205" width="170" height="24" rx="4" fill="#7f1d1d"/>
+    <text x="150" y="222" font-family="monospace" font-size="11" font-weight="bold" fill="#fca5a5" text-anchor="middle">TRUST &amp; SAFETY</text>
+    <text x="65" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• WhatsApp Gateway</text>
+    <text x="65" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Deterministic Rules</text>
+    <text x="65" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Zero Hallucination Pre-Scan</text>
+    <text x="65" y="330" font-family="monospace" font-size="11" fill="#f87171">Compliance First</text>
+  </g>
+
+  <!-- Flow arrow -->
+  <path d="M 250 275 L 305 275" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+  <polygon points="310,275 300,269 300,281" fill="#3b82f6"/>
+
+  <!-- Box 2: Orchestration Engine -->
+  <g filter="url(#shadow-crm)">
+    <rect x="310" y="190" width="190" height="170" rx="12" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="325" y="205" width="160" height="24" rx="4" fill="#1e40af"/>
+    <text x="405" y="222" font-family="monospace" font-size="11" font-weight="bold" fill="#bfdbfe" text-anchor="middle">ORCHESTRATOR</text>
+    <text x="325" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Dynamic Intent Routing</text>
+    <text x="325" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Local LLM Inference</text>
+    <text x="325" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Context Memory</text>
+    <text x="325" y="330" font-family="monospace" font-size="11" fill="#60a5fa">FastAPI + Redis</text>
+  </g>
+
+  <!-- Flow arrow -->
+  <path d="M 500 275 L 555 275" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+  <polygon points="560,275 550,269 550,281" fill="#f59e0b"/>
+
+  <!-- Box 3: Verification & Review -->
+  <g filter="url(#shadow-crm)">
+    <rect x="560" y="190" width="190" height="170" rx="12" fill="url(#card-crm)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="575" y="205" width="160" height="24" rx="4" fill="#78350f"/>
+    <text x="655" y="222" font-family="monospace" font-size="11" font-weight="bold" fill="#fde68a" text-anchor="middle">HITL VERIFICATION</text>
+    <text x="575" y="255" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Low-Confidence Queue</text>
+    <text x="575" y="280" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Real-Time WebSockets</text>
+    <text x="575" y="305" font-family="system-ui, sans-serif" font-size="13" fill="#e2e8f0">• Operator 1-Click Approve</text>
+    <text x="575" y="330" font-family="monospace" font-size="11" fill="#fbbf24">Full Audit Trail</text>
+  </g>
+
+  <!-- Footer Ribbon -->
+  <rect x="50" y="390" width="700" height="35" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="70" y="412" font-family="monospace" font-size="12" fill="#94a3b8">STACK: <tspan fill="#60a5fa">Python · FastAPI · WebSockets · Redis · Docker · Prometheus Observability · React Dashboard</tspan></text>
+</svg>

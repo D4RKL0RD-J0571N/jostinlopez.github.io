@@ -1,12 +1,12 @@
-// Hero.jsx - v1.1 - Fixed Framer Motion Imports
+// Hero.jsx - v1.2 - Re-keyed for i18n & High-Impact Pillars
 import React from 'react';
-import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { ArrowRight, Download, MousePointer2 } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
 import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
@@ -52,28 +52,29 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="font-mono text-accent text-lg mb-4 block tracking-wider">
+                    <span className="font-mono text-accent text-sm md:text-base mb-4 block tracking-wider font-semibold">
                         {t('hero.name')}
                     </span>
 
-                    <h1 className="text-4xl md:text-7xl font-bold mb-6 text-text-primary h-[3.5em] md:h-[auto] leading-tight">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-text-primary min-h-[3.2em] md:min-h-[auto] leading-tight">
                         <TypeAnimation
+                            key={i18n.language}
                             sequence={[
-                                t('hero.titles.0'), // "Creative Technologist"
-                                2000,
-                                t('hero.titles.1'), // "Systems Engineer"
-                                2000,
-                                t('hero.titles.2'), // "GenAI Experimenter"
-                                2000
+                                t('hero.titles.0'),
+                                2200,
+                                t('hero.titles.1'),
+                                2200,
+                                t('hero.titles.2'),
+                                2200
                             ]}
                             wrapper="span"
                             speed={50}
                             repeat={Infinity}
-                            className="bg-clip-text text-transparent bg-gradient-to-r from-text-primary to-text-secondary"
+                            className="bg-clip-text text-transparent bg-gradient-to-r from-text-primary via-slate-100 to-accent"
                         />
                     </h1>
 
-                    <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
                         {t('hero.subtitle')}
                     </p>
 
